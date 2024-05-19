@@ -1,0 +1,414 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>使用IBM Cloud Fonudray搭建V2Ray | WGXのBlog</title><meta name="keywords" content="教程,V2ray"><meta name="author" content="WGX,w.gx@foxmail.com"><meta name="copyright" content="WGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="羊被薅死了  前言 最近听说了两件事 , 一是jsdelivr修改了条款 , 对滥用jsdelivr来加速图片的账户可能进行屏蔽. 不幸的是我的一个专门用来存储图片的github帐号就中奖了. 二是谷歌云的免费试用时间调整到了三个月 , 本来还打算想办法弄一张信用卡来继续撸谷歌云的, 没想到连谷歌这样的大厂都被撸的害怕了. 感觉来自资本主义的羊毛不好薅了 , 网络自由的成本可能越来越高了 . 之前">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用IBM Cloud Fonudray搭建V2Ray">
+<meta property="og:url" content="https://uaena.me/2020/08/30/2020-08/IBM-CLOUD/index.html">
+<meta property="og:site_name" content="WGXのBlog">
+<meta property="og:description" content="羊被薅死了  前言 最近听说了两件事 , 一是jsdelivr修改了条款 , 对滥用jsdelivr来加速图片的账户可能进行屏蔽. 不幸的是我的一个专门用来存储图片的github帐号就中奖了. 二是谷歌云的免费试用时间调整到了三个月 , 本来还打算想办法弄一张信用卡来继续撸谷歌云的, 没想到连谷歌这样的大厂都被撸的害怕了. 感觉来自资本主义的羊毛不好薅了 , 网络自由的成本可能越来越高了 . 之前">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://w-gx.gitee.io/acg01/42.webp">
+<meta property="article:published_time" content="2020-08-30T07:59:34.000Z">
+<meta property="article:modified_time" content="2020-08-30T07:59:34.000Z">
+<meta property="article:author" content="WGX">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="V2ray">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w-gx.gitee.io/acg01/42.webp"><link rel="shortcut icon" href="https://w-gx.gitee.io/avatar_rmbg.webp"><link rel="canonical" href="https://uaena.me/2020/08/30/2020-08/IBM-CLOUD/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="geTd4nk0xyHshDGRn7Ok_EI0wu_p5kG2JfP8AATBGr4"/><meta name="msvalidate.01" content="826966C87C793B53CF7E62653C1F1025"/><meta name="baidu-site-verification" content="code-B1Ge11MKjt"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1279231244&amp;web_id=1279231244"></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: '天前',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-08-30 15:59:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/custom.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@v3.2.3/butterfly/css/buttons.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/mycss.css"><link rel="alternate" href="/atom.xml" title="WGXのBlog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://w-gx.gitee.io/avatar_rmbg.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/IU/"><i class="fa-fw fa fas fa-heartbeat"></i><span> IU</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 微语</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/%E6%96%87%E6%A1%A3/"><i class="fa-fw far fa-file-code"></i><span> 文档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw far fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-fan"></i><span> 小玩意</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/dot/"><i class="fa-fw fas fa-spinner"></i><span> 小圆点</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yinghuayu/"><i class="fa-fw fas fa-cannabis"></i><span> 樱花雨</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yanhua/"><i class="fa-fw fab fa-galactic-republic"></i><span> 放烟花</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aidn.jp/mikutap/"><i class="fa-fw fas fa-guitar"></i><span> Mikutap</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/"><i class="fa-fw fas fa-feather-alt"></i><span> 表白1</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love1/"><i class="fa-fw fas fa-feather"></i><span> 表白2</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love2/"><i class="fa-fw fas fa-leaf"></i><span> 表白3</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw far fa-star"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gybz/"><i class="fa-fw fas fa-desktop"></i><span> 关于本站</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/resume/"><i class="fa-fw far fa-gem"></i><span> 我的简历</span></a></li><li><a class="site-page" href="/about/"><i class="fa-fw far fa-comment-dots"></i><span> 留言板</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://w-gx.gitee.io/acg01/23.webp)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WGXのBlog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/IU/"><i class="fa-fw fa fas fa-heartbeat"></i><span> IU</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 微语</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/%E6%96%87%E6%A1%A3/"><i class="fa-fw far fa-file-code"></i><span> 文档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw far fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-fan"></i><span> 小玩意</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/dot/"><i class="fa-fw fas fa-spinner"></i><span> 小圆点</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yinghuayu/"><i class="fa-fw fas fa-cannabis"></i><span> 樱花雨</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yanhua/"><i class="fa-fw fab fa-galactic-republic"></i><span> 放烟花</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aidn.jp/mikutap/"><i class="fa-fw fas fa-guitar"></i><span> Mikutap</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/"><i class="fa-fw fas fa-feather-alt"></i><span> 表白1</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love1/"><i class="fa-fw fas fa-feather"></i><span> 表白2</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love2/"><i class="fa-fw fas fa-leaf"></i><span> 表白3</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw far fa-star"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gybz/"><i class="fa-fw fas fa-desktop"></i><span> 关于本站</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/resume/"><i class="fa-fw far fa-gem"></i><span> 我的简历</span></a></li><li><a class="site-page" href="/about/"><i class="fa-fw far fa-comment-dots"></i><span> 留言板</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">使用IBM Cloud Fonudray搭建V2Ray</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-08-30T07:59:34.000Z" title="发表于 2020-08-30 15:59:34">2020-08-30</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-08-30T07:59:34.000Z" title="更新于 2020-08-30 15:59:34">2020-08-30</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.6k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="tip error"><p><strong>羊被薅死了</strong></p></div>
+<h2 id="前言"><a class="markdownIt-Anchor" href="#前言"></a> 前言</h2>
+<p>最近听说了两件事 , 一是jsdelivr修改了条款 , 对滥用jsdelivr来加速图片的账户可能进行屏蔽. 不幸的是我的一个专门用来存储图片的github帐号就中奖了. 二是谷歌云的免费试用时间调整到了三个月 , 本来还打算想办法弄一张信用卡来继续撸谷歌云的, 没想到连谷歌这样的大厂都被撸的害怕了. 感觉来自资本主义的羊毛不好薅了 , 网络自由的成本可能越来越高了 .</p>
+<p>之前介绍过用heroku搭建v2ray的那个项目 , 虽然操作简单 , 但是速度实在是不稳定 . 今天介绍这个项目利用IBM Cloud Fonudray来搭建V2Ray . 我测试的结果很不错 , 和我的谷歌云节点不相上下.</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/w-gx/IBMYes">项目传送门</a></p>
+</blockquote>
+<p>下面给出项目中README文档内容 , 以供参考 .</p>
+<h2 id="使用ibm-cloud-fonudray搭建v2ray"><a class="markdownIt-Anchor" href="#使用ibm-cloud-fonudray搭建v2ray"></a> 使用IBM Cloud Fonudray搭建V2Ray</h2>
+<p>首先注册https://cloud.ibm.com/</p>
+<p>注册步骤略过</p>
+<p>登录后点击右侧 创建资源</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615192854218.png" alt="image-20200615192854218" /></p>
+<p>可以找到Cloud Foundray</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615193004495.png" alt="image-20200615193004495" /></p>
+<p>创建公共应用程序</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615193052842.png" alt="image-20200615193052842" /></p>
+<p>填写相关信息</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615193202810.png" alt="image-20200615193202810" /></p>
+<p>区域必须达拉斯，只有那里有免费的。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615193340241.png" alt="image-20200615193340241" /></p>
+<p>填写应用名称</p>
+<p>接着进入右上角命令行</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615210821081.png" alt="image-20200615210821081" /></p>
+<p>打开命令行，右上角选择相应的地区（Dallas），粘贴一键安装脚本：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O install.sh https://raw.githubusercontent.com/CCChieh/IBMYes/master/install.sh &amp;&amp; chmod +x install.sh  &amp;&amp; ./install.sh</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615210944753.png" alt="image-20200615210944753" /></p>
+<p>在配置的时候需要输入应用名称（这里就是我创建应用的时候输入应用名称我输入的是ibmyes，你需要改成你自己的名称）和应用内存大小（我们刚刚选择的是256）</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615211154143.png" alt="image-20200615211154143" /></p>
+<p>配置好，等待几分钟，便可自动完成安装。完成安装后，将输出随机的UUID 、WebSocket路径以及对应的配置链接：</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615211339053.png" alt="image-20200615211339053" /></p>
+<p>然后访问我们刚刚的应用的域名，如果不记得可以返回我们刚才的资源，点击访问应用程序</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615211851731.png" alt="image-20200615211851731" /></p>
+<p>URL后加上生成的WebSocket路径，看到<code>Bad Request</code>便成功了</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615211949359.png" alt="image-20200615211949359" /></p>
+<p>这里请记下你的域名</p>
+<p>把完成安装后输出的配置链接复制到你的v2rayN或v2rayNg中，修改地址为你的应用的域名（前面我们<code>Bad Request</code>那个网页的域名。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615212537944.png" alt="image-20200615212537944" /></p>
+<p>至此我们已经有一个可用的v2ray了，但是他每10天会重启一次，而且网速延迟很差，所以接下来会解决这个问题。</p>
+<h2 id="利用github的actions-每周重启-ibm-cloud-fonudray"><a class="markdownIt-Anchor" href="#利用github的actions-每周重启-ibm-cloud-fonudray"></a> 利用Github的Actions 每周重启 IBM Cloud Fonudray</h2>
+<p>IBM Cloud 10天不操作就会关机，所以我们需要 十天内对其重启一次，避免关机。</p>
+<p>首先登录IBM Cloud</p>
+<p>点击又上角的命令行</p>
+<p>在这一步我们主要是记录4个值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IBM_ACCOUNT &#x2F;&#x2F; IBM Cloud的登录邮箱和密码</span><br><span class="line">IBM_APP_NAME &#x2F;&#x2F; 应用的名称</span><br><span class="line">REGION_NUM &#x2F;&#x2F; 区域编码</span><br><span class="line">RESOURSE_ID &#x2F;&#x2F; 资源组ID</span><br></pre></td></tr></table></figure>
+<p>具体后面会一步一步完成</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615175949804.png" alt="image-20200615175949804" /></p>
+<p>进入命令行先执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibmcloud login</span><br></pre></td></tr></table></figure>
+<p>输入邮箱和密码。</p>
+<p>之后记录下区域(Region)</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615180817619.png" alt="image-20200615180817619" /></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#1. au-syd</span><br><span class="line">#2. in-che</span><br><span class="line">#3. jp-tok</span><br><span class="line">#4. kr-seo</span><br><span class="line">#5. eu-de</span><br><span class="line">#6. eu-gb</span><br><span class="line">#7. us-south</span><br><span class="line">#8. us-east</span><br></pre></td></tr></table></figure>
+<p>这里需要记下和区域对应的编号也就是<code>REGION_NUM</code>，比如我这里是us-south,那么我的区域编号是<code>7</code></p>
+<p>接下来获取资源组id<code>RESOURSE_ID</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ibmcloud resource groups</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615183425453.png" alt="image-20200615183425453" /></p>
+<p>图中所指向便是<code>RESOURSE_ID</code></p>
+<p>现在返回github，到本项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;github.com&#x2F;w-gx&#x2F;IBMYes</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615184239713.png" alt="image-20200615184239713" /></p>
+<p>右上角fork到自己的github下，然后进入setting</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615184327329.png" alt="image-20200615184327329" /></p>
+<p>选择Secrets</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615184426979.png" alt="image-20200615184426979" /></p>
+<p>New secret</p>
+<p>分别建立四个secret</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">IBM_ACCOUNT &#x2F;&#x2F; IBM Cloud的登录邮箱和密码</span><br><span class="line">IBM_APP_NAME &#x2F;&#x2F; 应用的名称</span><br><span class="line">REGION_NUM &#x2F;&#x2F; 区域编码</span><br><span class="line">RESOURSE_ID &#x2F;&#x2F; 资源组ID</span><br></pre></td></tr></table></figure>
+<p>以<code>IBM_ACCOUNT</code>为例<img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615184703280.png" alt="image-20200615184703280" /></p>
+<p>第一行为邮箱，第二行为密码。</p>
+<p>这里需要邮箱和密码所以中间换行 ，其他的不需要换行 。</p>
+<p>把四个secret补充完成</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615185015130.png" alt="image-20200615185015130" /></p>
+<p>之后点击上方Actions，在这里你就会看到有个IBM Cloud Auto Restart在执行。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615185614978.png" alt="image-20200615185614978" /></p>
+<p>如果没有看见Action的话到自己仓库的<code>/.github/workflows/ibm.yml</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615235426917.png" alt="image-20200615235426917" /></p>
+<p>编辑下，随意增添个空行然后commit下</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615235540567.png" alt="image-20200615235540567" /></p>
+<p>就可以看见有action了</p>
+<p>第一次可能因为secret没添加导致workflow执行失败，只需要点下</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615191100959.png" alt="image-20200615191100959" /></p>
+<p>进去后按照下图</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615191035212.png" alt="image-20200615191035212" /></p>
+<p>找到 <code>Re-run jobs</code>重新执行一次即可，至此自动重启已经ok了。</p>
+<blockquote>
+<p>感谢药油@<a target="_blank" rel="noopener" href="https://yaohuo.me/bbs/userinfo.aspx?touserid=24109">My Flavor</a>，原本打算弄bash在自己服务器定期执行脚本，现在看了他的帖子，发现用Actions是一个更好的选择。</p>
+</blockquote>
+<h2 id="cloudflare-高速节点中转"><a class="markdownIt-Anchor" href="#cloudflare-高速节点中转"></a> Cloudflare 高速节点中转</h2>
+<blockquote>
+<p>此部分贡献来自药油@<a target="_blank" rel="noopener" href="https://yaohuo.me/bbs/userinfo.aspx?touserid=5461">Joyace</a>、@<a target="_blank" rel="noopener" href="https://yaohuo.me/bbs/userinfo.aspx?touserid=21843">老婆</a>以及@<a target="_blank" rel="noopener" href="https://www.xjisme.com/">小俊博客</a></p>
+</blockquote>
+<p>cloudflare官网：<a target="_blank" rel="noopener" href="https://www.cloudflare.com/">https://www.cloudflare.com/</a></p>
+<p>注册，登录这里不再累述。</p>
+<p>登录后左上角点击菜单找到workers</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615214101750.png" alt="image-20200615214101750" /></p>
+<p>创建Worker</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615214140306.png" alt="image-20200615214140306" /></p>
+<p>打开和复制脚本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">addEventListener(</span><br><span class="line">&quot;fetch&quot;,event &#x3D;&gt; &#123;</span><br><span class="line">let url&#x3D;new URL(event.request.url);</span><br><span class="line">url.hostname&#x3D;&quot;ibmyes.us-south.cf.appdomain.cloud&quot;;</span><br><span class="line">let request&#x3D;new Request(url,event.request);</span><br><span class="line">event. respondWith(</span><br><span class="line">fetch(request)</span><br><span class="line">)</span><br><span class="line">&#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>修改第四行为你的应用的域名</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615214339159.png" alt="image-20200615214339159" /></p>
+<p>点击发送，测试是否出现<code>Bad Request</code>，出现则成功，点击保存并部署。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615214543839.png" alt="image-20200615214543839" /></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615214722195.png" alt="image-20200615214722195" /></p>
+<p>这里会给一个网址，*.*.workers.dev,这就是你的cloudflare中转后的域名。</p>
+<p>然后我们去v2的客户端中修改地址</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615215120033.png" alt="image-20200615215120033" /></p>
+<p>现在已经使用了cloudflare的代理。</p>
+<p>下面我们将筛选cloudflare的高速节点。</p>
+<p>克隆本项目到你的电脑上。</p>
+<p>打开项目下的<code>fping-msys2.0</code>目录运行<code>自动查找最优CF节点-懒人专用.bat</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615215435278.png" alt="image-20200615215435278" /></p>
+<p>这里假设我获取的最优ip是<code>104.17.188.91</code></p>
+<p>在客户端把地址换成ip，伪装域名换成我们cloudflare的workers的域名即可</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615215820188.png" alt="image-20200615215820188" /></p>
+<p>如果不方便用电脑优选ip也可以把地址设为<code>cloudflare.com</code>或<code>icook.tw</code>,这两个一个cloudflare官网，自然也是使用自家cdn，另外一家是台湾省的一个网站，域名指向的ip一般也是比较好的线路。</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://blog-img.vercel.app/image-20200615220201165.png" alt="image-20200615220201165" /></p>
+<p>这里稍微提下原理吧，主要涉及CDN和请求头部，CDN识别流量是访问哪个网站的是根据请求头的Host来识别，所以这里要么host用我们的域名 ，要么我们伪装成我们的域名，这样都可以达到回源我们网站的请求。如果自己有域名也可以换自己的域名，域名也可以从第三方接入商cname，有兴趣的同学可以自己研究下。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:w.gx@foxmail.com">WGX</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://uaena.me/2020/08/30/2020-08/IBM-CLOUD/">https://uaena.me/2020/08/30/2020-08/IBM-CLOUD/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://uaena.me" target="_blank">WGXのBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/V2ray/">V2ray</a></div><div class="post_share"><div class="social-share" data-image="https://w-gx.gitee.io/acg01/42.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/09/03/2020-09/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"><img class="prev-cover" data-lazy-src="https://w-gx.gitee.io/acg01/25.webp" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">迭代器与生成器</div></div></a></div><div class="next-post pull-right"><a href="/2020/08/22/2020-08/Python-%E5%BC%82%E5%B8%B8%E5%92%8C%E6%96%87%E4%BB%B6/"><img class="next-cover" data-lazy-src="https://w-gx.gitee.io/acg01/12.webp" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Python--异常和文件</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/08/05/基于Heroku搭建v2ray/" title="零代码基于Heroku搭建v2ray"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161736.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-05</div><div class="title">零代码基于Heroku搭建v2ray</div></div></a></div><div><a href="/2020/05/06/2020-05/v2ray/" title="v2ray"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img/wallhaven-md5rx1_1920x1080.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-06</div><div class="title">v2ray</div></div></a></div><div><a href="/2020/08/05/天翼云自动签到/" title="基于Github Actions实现天翼云盘自动签到"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206164251.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-08-05</div><div class="title">基于Github Actions实现天翼云盘自动签到</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Utterances</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://w-gx.gitee.io/avatar_rmbg.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">WGX</div><div class="author-info__description">NO CODE NO LIFE</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/w-gx/comments/issues"><i class="fab fa-github"></i><span>Issues</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://w-gx.gitee.io" target="_blank" title="我的首页"><i class="fas fa-house-user"></i></a><a class="social-icon" href="https://github.com/w-gx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2401881997@qq.com" target="_blank" title="联系我"><i class="fas fa-envelope"></i></a><a class="social-icon" href="tencent://message/?uin=2401881997&amp;Site=&amp;Menu=yes" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://w-gx.gitee.io/resume/assets/images/WeChanSQ.jpg" target="_blank" title="微信码"><i class="fab fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/3166393074/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://www.instagram.com/wgx7777/" target="_blank" title="Instragram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://wgx-dh.github.io" target="_blank" title="导航网站"><i class="fa fa-flag"></i></a><a class="social-icon" href="https://guistar.tk/" target="_blank" title="我的网盘"><i class="fas fa-cloud-upload-alt"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>搬迁公告</span></div><div class="announcement_content"><p id = "gonggao">这个主题用腻了，长时间不更新也导致我审美疲劳了，于是决定换个主题。但是又觉得搬迁文章太麻烦，所以之前的文章就放在这里不动了。在新站点我整理了当前网站的文章目录，<a target="_blank" rel="noopener" href="https://frostwork.me/catalog/">点击查看</a>。新家地址：<a id="gong_gao3" target="_blank" rel="noopener" href="https://frostwork.me">https://frostwork.me</a></p></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text"> 前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8ibm-cloud-fonudray%E6%90%AD%E5%BB%BAv2ray"><span class="toc-number">2.</span> <span class="toc-text"> 使用IBM Cloud Fonudray搭建V2Ray</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A9%E7%94%A8github%E7%9A%84actions-%E6%AF%8F%E5%91%A8%E9%87%8D%E5%90%AF-ibm-cloud-fonudray"><span class="toc-number">3.</span> <span class="toc-text"> 利用Github的Actions 每周重启 IBM Cloud Fonudray</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cloudflare-%E9%AB%98%E9%80%9F%E8%8A%82%E7%82%B9%E4%B8%AD%E8%BD%AC"><span class="toc-number">4.</span> <span class="toc-text"> Cloudflare 高速节点中转</span></a></li></ol></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 <i id="heartbeat" class="fa fas fa-heartbeat"></i> WGX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'N9kQohzQdS005IAuTtl0hqMn-MdYXbMMI',
+      appKey: 'sGQ1MvQQkUqgAK8AU32XOtqt',
+      placeholder: '1. 昵称填写QQ号可自动获取你的QQ昵称和头像,并自动帮你填写邮箱哦~ ^_^ \n2. 昵称和邮箱是必填项! \n3. 网址[选填]请手动添加https://',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadUtterances () {
+  let ele = document.createElement('script')
+  ele.setAttribute('id', 'utterances_comment')
+  ele.setAttribute('src', 'https://utteranc.es/client.js')
+  ele.setAttribute('repo', 'w-gx/comments')
+  ele.setAttribute('issue-term', 'pathname')
+  let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+  ele.setAttribute('theme', nowTheme)
+  ele.setAttribute('crossorigin', 'anonymous')
+  ele.setAttribute('async', 'true')
+  document.getElementById('utterances-wrap').insertAdjacentElement('afterbegin',ele)
+}
+
+function utterancesTheme () {
+  if (document.querySelector('.utterances-frame')) {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    const message = {
+      type: 'set-theme',
+      theme: theme
+    };
+    const iframe = document.querySelector('.utterances-frame');
+    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+}
+
+if ('Valine' === 'Utterances' || !true) {
+  if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+  else loadUtterances()
+} else {
+  function loadOtherComment () {
+    loadUtterances()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@master/xkTool/v3.1.0/xkTool.js"></script><script src="/js/myjs.js"></script><script type="text/javascript"> $(document).ready(function(){alert("本站弃用！\n不再更新！\n详见公告\n继续关注我请移步至：https://frostwork.me");}) </script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/index/password/"]):not([href="/shuoshuo/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>

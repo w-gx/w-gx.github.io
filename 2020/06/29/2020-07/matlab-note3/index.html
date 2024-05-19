@@ -1,0 +1,500 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Matlab学习笔记----变量和数据存储 | WGXのBlog</title><meta name="keywords" content="Matlab"><meta name="author" content="WGX,w.gx@foxmail.com"><meta name="copyright" content="WGX"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="介绍Matlab的一些其他变量和如何存储工作区的变量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matlab学习笔记----变量和数据存储">
+<meta property="og:url" content="https://uaena.me/2020/06/29/2020-07/matlab-note3/index.html">
+<meta property="og:site_name" content="WGXのBlog">
+<meta property="og:description" content="介绍Matlab的一些其他变量和如何存储工作区的变量">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161615.webp">
+<meta property="article:published_time" content="2020-06-29T03:41:06.000Z">
+<meta property="article:modified_time" content="2020-06-29T03:41:06.000Z">
+<meta property="article:author" content="WGX">
+<meta property="article:tag" content="Matlab">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161615.webp"><link rel="shortcut icon" href="https://w-gx.gitee.io/avatar_rmbg.webp"><link rel="canonical" href="https://uaena.me/2020/06/29/2020-07/matlab-note3/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//s4.cnzz.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="geTd4nk0xyHshDGRn7Ok_EI0wu_p5kG2JfP8AATBGr4"/><meta name="msvalidate.01" content="826966C87C793B53CF7E62653C1F1025"/><meta name="baidu-site-verification" content="code-B1Ge11MKjt"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script async="async" data-pjax="data-pjax" src="https://s4.cnzz.com/z_stat.php?id=1279231244&amp;web_id=1279231244"></script><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":60,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: '天前',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#49b1f5","bgDark":"#121212","position":"top-center"},
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isanchor: true
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-06-29 11:41:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/custom.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@v3.2.3/butterfly/css/buttons.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/font-awesome-animation.min.css"><link rel="stylesheet" href="/css/mycss.css"><link rel="alternate" href="/atom.xml" title="WGXのBlog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" data-lazy-src="https://w-gx.gitee.io/avatar_rmbg.webp" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/IU/"><i class="fa-fw fa fas fa-heartbeat"></i><span> IU</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 微语</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/%E6%96%87%E6%A1%A3/"><i class="fa-fw far fa-file-code"></i><span> 文档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw far fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-fan"></i><span> 小玩意</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/dot/"><i class="fa-fw fas fa-spinner"></i><span> 小圆点</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yinghuayu/"><i class="fa-fw fas fa-cannabis"></i><span> 樱花雨</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yanhua/"><i class="fa-fw fab fa-galactic-republic"></i><span> 放烟花</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aidn.jp/mikutap/"><i class="fa-fw fas fa-guitar"></i><span> Mikutap</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/"><i class="fa-fw fas fa-feather-alt"></i><span> 表白1</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love1/"><i class="fa-fw fas fa-feather"></i><span> 表白2</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love2/"><i class="fa-fw fas fa-leaf"></i><span> 表白3</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw far fa-star"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gybz/"><i class="fa-fw fas fa-desktop"></i><span> 关于本站</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/resume/"><i class="fa-fw far fa-gem"></i><span> 我的简历</span></a></li><li><a class="site-page" href="/about/"><i class="fa-fw far fa-comment-dots"></i><span> 留言板</span></a></li></ul></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161616.webp)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">WGXのBlog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/IU/"><i class="fa-fw fa fas fa-heartbeat"></i><span> IU</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/shuoshuo/"><i class="fa-fw fas fa-comment-dots"></i><span> 微语</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-book"></i><span> 文章</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i><span> 时间轴</span></a></li><li><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page" href="/%E6%96%87%E6%A1%A3/"><i class="fa-fw far fa-file-code"></i><span> 文档</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fa fa-list"></i><span> 娱乐</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page" href="/movies/"><i class="fa-fw fa fa-film"></i><span> 电影</span></a></li><li><a class="site-page" href="/Gallery/"><i class="fa-fw far fa-image"></i><span> 图片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-fan"></i><span> 小玩意</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/dot/"><i class="fa-fw fas fa-spinner"></i><span> 小圆点</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yinghuayu/"><i class="fa-fw fas fa-cannabis"></i><span> 樱花雨</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/yanhua/"><i class="fa-fw fab fa-galactic-republic"></i><span> 放烟花</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://aidn.jp/mikutap/"><i class="fa-fw fas fa-guitar"></i><span> Mikutap</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/"><i class="fa-fw fas fa-feather-alt"></i><span> 表白1</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love1/"><i class="fa-fw fas fa-feather"></i><span> 表白2</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/love/love2/"><i class="fa-fw fas fa-leaf"></i><span> 表白3</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw far fa-star"></i><span> 关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/gybz/"><i class="fa-fw fas fa-desktop"></i><span> 关于本站</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://w-gx.gitee.io/resume/"><i class="fa-fw far fa-gem"></i><span> 我的简历</span></a></li><li><a class="site-page" href="/about/"><i class="fa-fw far fa-comment-dots"></i><span> 留言板</span></a></li></ul></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">Matlab学习笔记----变量和数据存储</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-06-29T03:41:06.000Z" title="发表于 2020-06-29 11:41:06">2020-06-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-06-29T03:41:06.000Z" title="更新于 2020-06-29 11:41:06">2020-06-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Matlab/">Matlab</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">4.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>14分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="变量"><a class="markdownIt-Anchor" href="#变量"></a> 变量</h1>
+<p>在前面的内容中, 我们已经接触过一些matlab中的变量, 但是仅涉及double类型的向量和矩阵. 这里介绍一些matlab中其他类型的变量及其部分使用方法.matlab变量的总体分类如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/69048ade5778143135d0c9681704fc2c.png" alt="image-20200701085952368" /></p>
+<p>matlab中提供一些类型之间转换的函数, 下面列举出一些常见的函数, 这些转换函数只需要对它的存在有印象即可, 等到实际应用中有需求时, 可以通过查询文档查看具体使用方法.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/double.html?requestedDomain=cn"><code>double()</code></a>: 将目标变量转换为double类型.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/single.html"><code>single()</code></a>: 转换为单精度变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/int8.html"><code>int8()</code></a>: 转换为8位的整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/int16.html"><code>int16()</code></a>: 转换为16位的整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/int32.html"><code>int32()</code></a>: 转换为32位的整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/int64.html"><code>int64()</code></a>: 转换为64位的整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/uint8.html"><code>uint8()</code></a>: 转换为无符号的8位整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/uint16.html"><code>uint16()</code></a>: 转换为无符号的16位整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/uint32.html"><code>uint32()</code></a>: 转换为无符号的32位整型变量.</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/uint64.html"><code>uint64()</code></a>: 转换为无符号的64位整型变量.</li>
+</ul>
+<h2 id="char-string"><a class="markdownIt-Anchor" href="#char-string"></a> char &amp; String</h2>
+<h3 id="char"><a class="markdownIt-Anchor" href="#char"></a> char</h3>
+<p>与C语言相同, Matlab中的char变量实际存储其 ASCII 码值, ASCII编码从0到255.char变量的声明, 要用一对<code>' '</code>包含字符的内容. <code>' '</code>包含一个字符就是char类型变量, 包含多个字符就是string类型变量.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&#x27;h&#x27;</span></span><br><span class="line">whos</span><br><span class="line">uint16(s1)</span><br></pre></td></tr></table></figure>
+<p>通过执行上述代码, 可以得出 字符<code>h</code>的ASCII编码值为104.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/59369105c44e29361a921e5867d4e3c2.png" alt="image-20200701091739381" /></p>
+<p>下面给出完整的ASCII码表.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/714a68c50d3d016aaecbafdc2f396733.png" alt="image-20200701091831976" /></p>
+<h3 id="string"><a class="markdownIt-Anchor" href="#string"></a> String</h3>
+<p>String就是一系列的字符,比如:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">s1 = <span class="string">&#x27;Example&#x27;</span>;</span><br><span class="line">s2 = <span class="string">&#x27;String&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>可以通过<code>[ ]</code>形式将字符串拼接起来, 类似于矩阵的拼接.比如<code>s3=[s1 s2]</code>.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/5e63c1c2401dede6b0ab9efc65086036.png" alt="image-20200701092425303" /></p>
+<p>注意到上面的命令执行结果中两个字符串之间是没有空格的, 指令中的空格只是两个输入变量之间相互区分的作用.如果想要得到带空格的结果字符串, 可以在拼接过程中手动添加空格字符,例如: <code>s4= [s1 ' ' s2]</code>,</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/1052a9330c972f73bd12c17def4dc494.png" alt="image-20200701092655604" /></p>
+<p>在矩阵的拼接中, 曾经提到过,只要满足拼接条件, 使用<code>[]</code>的方式可以进行除了横向拼接外的其他形式的拼接,那么若执行<code>s5=[s1;s2]</code>结果如何呢?</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/ac93fd8146954fe707ecc5bc279f3b7c.png" alt="image-20200701093711613" /></p>
+<p>由于字符串的长度不一致, 导致无法进行纵向拼接, 可以通过补充字符的方式尝试再拼接一次,<code>s5=[s1;s2 'x']</code></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/329bfb9b24477d0db130a1e37dbbdad3.png" alt="image-20200701093919808" /></p>
+<p>matlab中的String和C语言中的字符串在处理过程中还是存在一些不同之处, 看下面的例子, 思考其执行的结果.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str=<span class="string">&#x27;aardvark&#x27;</span>;</span><br><span class="line"><span class="string">&#x27;a&#x27;</span> == str</span><br></pre></td></tr></table></figure>
+<p>按C语言的理解, 比较两个字符串是否相等, 显然不相等, 那么应该返回逻辑0值. 但是事实并不是这样,</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/df5bf17c94c5ea2f2a27a7e78de415d1.png" alt="image-20200701093139375" /></p>
+<p>返回的结果并不是单一的0 ,而是一个由 0 和1 组成的向量, 通过观察可以发现, 返回的结果向量的长度与str长度相同, 进一步可以发现, 在str字符串中字符<code>a</code>的位置在结果向量中是1. 因此, 在matlab中 字符与字符串之间的比较是字符逐一与字符串中的字符进行比较, 相同则返回1, 不同则返回0,返回的结果是一个向量值.为了进一步探究字符与字符串,字符串与字符串之间如何进行比较, 分别执行<code>'aa'==str</code>,<code>'12345678'==str</code>,观察结果.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/8df8404d72549c66d9bd7d41db9d6cf7.png" alt="image-20200701095911453" /></p>
+<p>结论如下:</p>
+<div class="note success flat"><p><strong>字符与字符串进行比较</strong>: 字符与字符串中的每一个字符逐一进行比较, 相同则返回1, 不同返回0. 最终返回结果是一个向量.</p>
+<p><strong>字符串与字符串进行比较</strong>: 要求进行比较的字符串长度相同, 对两个字符串对应位置的字符进行比较, 相同则返回1, 不同则返回0. 最终的结果是一个向量.</p>
+</div>
+<p>那么<code>str(str=='a')='Z'</code>的执行结果如何呢? 考虑到<code>str()</code>就是对str字符串进行索引, 索引值就是<code>str=='a'</code>的返回值, 上面已经讨论过, <code>str=='a'</code>的返回值是 一个由0 和1 组成的向量, matlab面对这样一个向量的处理结果是:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/182863bfc5097297bce3fb60e3a9f2e2.png" alt="image-20200701101139890" /></p>
+<p>似乎和想象中的存在一些差别, 对于普通的索引方式<code>str([1 2 3])</code>,的结果如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/76c1c7f4e9d5fb9396bca25fab747e1a.png" alt="image-20200701101351191" /></p>
+<p>这和我们的预期相同, 比较上述两种索引方式的区别, 可能的原因是, Matlab对于逻辑值的索引和普通的索引存在处理上的差别, 对于由0和1 组成的向量会优先处理成逻辑向量, 为了验证这一想法, 考虑执行下面两个命令:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/6e8c10a65db0532126d399d41f199e17.png" alt="image-20200701101630662" /></p>
+<p>显然, <mark>并不是由0和1 组成的向量就是逻辑向量</mark>, 根据在其他语言处获得的经验, 我们尝试把数值变量强制转换为逻辑变量, 观察结果.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/bac48af0a16e3588b1b6842a7c023025.png" alt="image-20200701101916211" /></p>
+<div class="note success flat"><p><strong>matlab中字符串对于逻辑值的索引和数值型的索引确实存在区别, 对于逻辑值的索引返回一个向量,其长度等于逻辑向量中1的个数, 字符由原字符串中与逻辑向量中1的位置相对应字符组成</strong></p>
+</div>
+<p><code>str(str=='a')='Z'</code>的结果为:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/5ade3e0a1c7072bbee876ec5db3ebce6.png" alt="image-20200701102506746" /></p>
+<hr />
+<blockquote>
+<p>练习:</p>
+<p>写一个脚本文件, 实现字符串的逆置.</p>
+<p>s1=‘I like letter E’ ==&gt; s2=‘E rettel ekil I’</p>
+</blockquote>
+<p>参考结果:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/a9cca39c18575b4a7e05dd7fac70caa5.png" alt="image-20200701110124138" /></p>
+<div class="hide-block"><button type="button" class="hide-button button--animated" style="background-color:  #ffd700 ;color: #fff">参考代码 
+    </button><span class="hide-content"><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">y</span>=<span class="title">tran</span><span class="params">(x)</span></span></span><br><span class="line">ii=<span class="built_in">length</span>(x);</span><br><span class="line">jj=<span class="number">1</span>;</span><br><span class="line"><span class="keyword">while</span> ii&gt;<span class="number">0</span></span><br><span class="line">    y(jj)=x(ii);</span><br><span class="line">    jj=jj+<span class="number">1</span>;</span><br><span class="line">    ii=ii<span class="number">-1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+</span></div>
+<h2 id="structure"><a class="markdownIt-Anchor" href="#structure"></a> Structure</h2>
+<p>matlab中的结构体与C中的结构体类似 , 都是用来存储一系列的异型变量.结构体的逻辑模型如下图所示:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/dbf3993857f76207e6e643534b4f3333.png" alt="image-20200701134158068" /></p>
+<p>在matlab中输入下面的代码来写入上图中的信息.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">student.name = <span class="string">&#x27;John Doe&#x27;</span>;</span><br><span class="line">student.id = <span class="string">&#x27;jd2@sfu.ca&#x27;</span>;</span><br><span class="line">student.number = <span class="number">301073268</span>;</span><br><span class="line">student.grade = [<span class="number">100</span> <span class="number">75</span> <span class="number">73</span>; ...</span><br><span class="line">				<span class="number">95</span> <span class="number">91</span> <span class="number">85.5</span>; ...</span><br><span class="line">				<span class="number">100</span> <span class="number">98</span> <span class="number">72</span>];</span><br><span class="line">student</span><br></pre></td></tr></table></figure>
+<p>多个结构体类型的变量构成结构体数组.其逻辑示意图如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/e9e82778933397e612c379f413c4d4dd.png" alt="image-20200701134903948" /></p>
+<p>对于结构体数组, 其索引方式如之前的其他类型变量类似, 都是通过名称加<code>( )</code>的方式进行索引.因此, 第二个结构变量的输入过程为:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">student(<span class="number">2</span>).name= <span class="string">&#x27;Ann Lane&#x27;</span>;</span><br><span class="line">student(<span class="number">2</span>).id= <span class="string">&#x27;aln4@sfu.ca&#x27;</span>;</span><br><span class="line">student(<span class="number">2</span>).number= <span class="number">301078853</span>;</span><br><span class="line">student(<span class="number">2</span>).grade= [<span class="number">95</span> <span class="number">100</span> <span class="number">90</span>;<span class="number">95</span> <span class="number">82</span> <span class="number">97</span>;<span class="number">100</span> <span class="number">85</span> <span class="number">100</span>];</span><br></pre></td></tr></table></figure>
+<p>输入完成后, matlab中的student变量形式如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/71776e4edb97859a185f79d643085d51.png" alt="image-20200701135616629" /></p>
+<p>如果想要获得Ann Lane 第三门课程的成绩信息, 索引两次即可. <code>student(2).grade(1,3)</code></p>
+<p>下面列举一些和结构体有关的matlab内置的函数, 具体用法在需要时查看文档即可.</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cell2struct.html;jsessionid=8f57871d8a65e5b247e0b4eb2dcd">cell2struct</a>: 将元胞数组转换为结构体数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/fieldnames.html">fieldnames</a>: 结构体的字段名称</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/getfield.html">getfield</a>: 结构体数组字段</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isfield.html">isfield</a>: 确定输入是否为结构体数组字段</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isstruct.html">isstruct</a>: 确定输入是否为结构体数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/orderfields.html">orderfields</a>: 结构体数组的顺序字段</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/rmfield.html">rmfield</a>: 删除结构体中的字段</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/setfield.html?requestedDomain=cn">setfield</a>: 为结构体数组字段赋值</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/struct.html?requestedDomain=cn">struct</a>: 结构体数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/struct2cell.html?requestedDomain=cn">struct2cell</a>: 将结构体转换为元胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/structfun.html?requestedDomain=cn">structfun</a>: 对标量结构体的每个字段应用函数</li>
+</ul>
+<p>比如:</p>
+<ul>
+<li><code>fieldnames(student)</code>的执行结果: <img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/2c426536a61db12b0c30514ab6123971.png" alt="image-20200701141055512" /></li>
+<li><code>rmfield(student,'id')</code>的执行结果: <img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/0a72e8597ae442b3eb9613e19f246aad.png" alt="image-20200701141401390" /></li>
+</ul>
+<p><strong>Nesting Structures (结构体嵌套)</strong></p>
+<p>结构体中可以继续嵌套结构体, 其逻辑模型如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/02b8c5f4c26902789e072853f67f98d7.png" alt="image-20200701141651981" /></p>
+<p>结构体之间的嵌套, 可以使用函数<code>struct</code>进行输入, 也可以使用索引的方式进行输入.下面给出一个例子</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A = struct(<span class="string">&#x27;data&#x27;</span>,[<span class="number">1</span> <span class="number">2</span> <span class="number">3</span>;<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>],<span class="string">&#x27;nest&#x27;</span>,...</span><br><span class="line">			struct(<span class="string">&#x27;testnum&#x27;</span>,<span class="string">&#x27;Tset 1&#x27;</span>,...</span><br><span class="line">			<span class="string">&#x27;xdata&#x27;</span>,[<span class="number">4</span> <span class="number">2</span> <span class="number">8</span>],<span class="string">&#x27;ydata&#x27;</span>,[<span class="number">3</span> <span class="number">4</span> <span class="number">6</span>]));</span><br><span class="line"><span class="comment">%结构体A中的第二个字段nest是一个结构体类型</span></span><br><span class="line">A(<span class="number">2</span>).data=[<span class="number">3</span> <span class="number">4</span> <span class="number">5</span> ; <span class="number">1</span> <span class="number">3</span> <span class="number">5</span>];</span><br><span class="line">A(<span class="number">2</span>).nest.testnum=<span class="string">&#x27;Test 2&#x27;</span>;</span><br><span class="line">A(<span class="number">2</span>).nest.xdata=[ <span class="number">3</span> <span class="number">4</span> <span class="number">5</span>];</span><br><span class="line">A(<span class="number">2</span>).nest.ydata=[ <span class="number">2</span> <span class="number">4</span> <span class="number">5</span>];</span><br></pre></td></tr></table></figure>
+<p>输入<code>A.nest</code>查看结果:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/23847f057b3ecc54342fbd332cbc7e5b.png" alt="image-20200701142707967" /></p>
+<h2 id="cell-array"><a class="markdownIt-Anchor" href="#cell-array"></a> Cell Array</h2>
+<p>细胞数组是另一种存储异型数据的数据类型.类似于一个矩阵,但是矩阵的每一个单元存储不同类型的数据.需要使用<code>&#123; &#125;</code>来声明.其逻辑示意图如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/2e1b05bf6e0c09c20b9d4293769e749b.png" alt="image-20200701143019123" /></p>
+<p>对于上述示意图中的细胞数组, 有以下两种输入方式, 但是都需要用到<code>&#123; &#125;</code>,只是形式上有所区别, 关于何时采用何种形式, 在后面的学习中会有更进一步的认识.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">% 第一种输入方式</span></span><br><span class="line">A(<span class="number">1</span>,<span class="number">1</span>)= &#123; [<span class="number">1</span> <span class="number">4</span> <span class="number">3</span> ; <span class="number">0</span> <span class="number">5</span> <span class="number">8</span> ; <span class="number">7</span> <span class="number">2</span> <span class="number">9</span>] &#125;;</span><br><span class="line">A(<span class="number">1</span>,<span class="number">2</span>)= &#123;<span class="string">&#x27;Anne Smith&#x27;</span>&#125;;</span><br><span class="line">A(<span class="number">2</span>,<span class="number">1</span>)= &#123;<span class="number">3</span>+<span class="number">7</span><span class="built_in">i</span>&#125;;</span><br><span class="line">A(<span class="number">2</span>,<span class="number">2</span>)= &#123;-<span class="built_in">pi</span>:<span class="built_in">pi</span>:<span class="built_in">pi</span>&#125;;</span><br><span class="line"><span class="comment">% 第二种输入方式</span></span><br><span class="line">A&#123;<span class="number">1</span>,<span class="number">1</span>&#125;= [<span class="number">1</span> <span class="number">4</span> <span class="number">3</span> ; <span class="number">0</span> <span class="number">5</span> <span class="number">8</span> ; <span class="number">7</span> <span class="number">2</span> <span class="number">9</span>];</span><br><span class="line">A&#123;<span class="number">1</span>,<span class="number">2</span>&#125;= <span class="string">&#x27;Anne Smith&#x27;</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">1</span>&#125;= <span class="number">3</span>+<span class="number">7</span><span class="built_in">i</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">2</span>&#125;= -<span class="built_in">pi</span>:<span class="built_in">pi</span>:<span class="built_in">pi</span>;</span><br></pre></td></tr></table></figure>
+<p>上述两种输入方式只是形式上的区别,对于输入的结果没有任何影响. 实际上,matlab是通过指针来实现在一个矩阵中存放不同的数据类型, 也就是说, 细胞数组实际上是一个指针矩阵, A(1,1)中存放的是其内容的地址.示意图如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/a6590ab70ba1385987f2584d1ecbe0a0.png" alt="image-20200701144024761" /></p>
+<p>对于细胞数组的索引方式和普通矩阵的索引方式也有所区别, 比如, 如何才能索引到A(1,1)处的第一个元素1呢?首先想到的就是套娃思想,执行<code>A(1,1)(1,1)</code>,<code>A(1,1)(1,1)</code>的执行结果:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/f7cee70fa101e5cd10e329a03bac70e2.png" alt="image-20200701151459699" /></p>
+<p>对于细胞数组的索引<code>A&#123;1,1&#125;</code>与<code>A(1,1)</code>存在着一定的区别:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/2671b461d9659033d8da1ecb4056c7cd.png" alt="image-20200701151712084" /></p>
+<p>从上面的结果上来看, 想要索引到第一个矩阵中的第一个元素正确的方法是<code>A&#123;1,1&#125;(1,1)</code>:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/8ddfee8a698728fd2dcf216d550a1c04.png" alt="image-20200701151835135" /></p>
+<hr />
+<blockquote>
+<p>练习:</p>
+<p>建立一个细胞数组, 其中存储的内容如下图.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/d40b6edbcd9b635777f3af7b984bc84d.png" alt="image-20200701144157479" /></p>
+</blockquote>
+<p>参考代码:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">B&#123;<span class="number">1</span>,<span class="number">1</span>&#125;= <span class="string">&#x27;This is the first cell&#x27;</span>;</span><br><span class="line">B&#123;<span class="number">1</span>,<span class="number">2</span>&#125;= [<span class="number">5</span>+<span class="number">6</span><span class="built_in">j</span> <span class="number">4</span>+<span class="number">5</span><span class="built_in">j</span>];</span><br><span class="line">B&#123;<span class="number">2</span>,<span class="number">1</span>&#125;= [ <span class="number">1</span> <span class="number">2</span> <span class="number">3</span>;<span class="number">4</span> <span class="number">5</span> <span class="number">6</span>;<span class="number">7</span> <span class="number">8</span> <span class="number">9</span> ];</span><br><span class="line">B&#123;<span class="number">2</span>,<span class="number">2</span>&#125;= &#123;<span class="string">&#x27;Tim&#x27;</span> , <span class="string">&#x27;Chris&#x27;</span>&#125;;</span><br></pre></td></tr></table></figure>
+<div class='tip error'><p>我还没有学会字符串数组的创建方法. 在最后一行代码使用<span class="inline-tag grey">B{2,2}= ['Tim' , 'Chris'];</span>时, 总是会被执行成字符串拼接操作, 形成一个字符串. 而目前这种写法, B(2,2)处存放的不是字符串数组, 而是一个细胞数组中存放了两个字符串.<p></div>
+<p>结果如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/a3df45cb5dce06b3bec95f5ef6935a41.png" alt="image-20200701150751750" /></p>
+<p>下面列出一些和细胞数组相关的matlab内置函数:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cell.html">cell</a>: 细胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cell2mat.html">cell2mat</a>: 将细胞数组转换为基础数据类型的普通数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cell2struct.html">cell2struct</a>:  将细胞数组转换为结构体数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/celldisp.html">celldisp</a>: 显示细胞数组内容</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cellfun.html">cellfun</a>: 对元胞数组中的每个细胞应用函数</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cellplot.html">cellplot</a>: 以图形方式显示细胞数组的结构体</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/cellstr.html">cellstr</a>: 转换为字符向量细胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/iscell.html">iscell</a>: 确定输入是否为细胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/mat2cell.html?requestedDomain=cn">mat2cell</a>: 将数组转换为在细胞中包含子数组的细胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/num2cell.html?requestedDomain=cn">num2cell</a>: 将数组转换为相同大小的细胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/struct2cell.html?requestedDomain=cn">struct2cell</a>: 将结构体转换为细胞数组</li>
+</ul>
+<p>举个例子:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">magic</span>(<span class="number">3</span>) <span class="comment">% magic(3)是生成3为的魔方矩阵, 魔方矩阵是横竖斜相加得数都相同的矩阵.</span></span><br><span class="line">b = <span class="built_in">num2cell</span>(a)</span><br><span class="line">c = mat2cell(a, [<span class="number">1</span> <span class="number">1</span> <span class="number">1</span> ] ,<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<p>效果:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/353fd1f7133411541143a1a19a7ea379.png" alt="image-20200701153307123" /></p>
+<h2 id="multidimensional-array"><a class="markdownIt-Anchor" href="#multidimensional-array"></a> Multidimensional Array</h2>
+<p>多维数组实际上就是套娃思想, 其逻辑示意图如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/73fa8f1773341ed4a589d31c6d2b6b72.png" alt="image-20200701153457907" /></p>
+<p>可以通过下面的代码输入一个三维的细胞数组:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">1</span>&#125; = [<span class="number">1</span> <span class="number">2</span> ; <span class="number">4</span> <span class="number">5</span> ];</span><br><span class="line">A&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">1</span>&#125; = <span class="string">&#x27;Name&#x27;</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>&#125; = <span class="number">2</span><span class="number">-4</span><span class="built_in">i</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">1</span>,<span class="number">1</span>&#125; = <span class="number">7</span>;</span><br><span class="line">A&#123;<span class="number">1</span>,<span class="number">1</span>,<span class="number">2</span>&#125; = <span class="string">&#x27;Name2&#x27;</span>;</span><br><span class="line">A&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">2</span>&#125; = <span class="number">3</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">1</span>,<span class="number">2</span>&#125; = <span class="number">0</span>:<span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">2</span>,<span class="number">2</span>&#125; = [<span class="number">4</span> <span class="number">5</span>]&#x27;;</span><br></pre></td></tr></table></figure>
+<p>在思想上和其他语言中的多维数组应该没什么区别. 输入之后的结果示意图如下:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/1a8f6499b9abca878916f4aff9e11557.png" alt="image-20200701154131687" /></p>
+<p>上面的矩阵输入方式比较复杂,在输入过程中要先考虑好每个索引值之间的相对位置, 很容易造成输入的最终结果和我们的预期结果不一致的情况, 下面介绍<span class="inline-tag blue">cat()函数</span>, <code>cat()</code>函数用来串联数组, 使用语法为<code>C = cat(dim,A1,A2,…,An)</code>,dim参数代表拼接的维度参数,一般取1 2 3三个数值, 1表示列的维度,2表示行的维度,3则表示立体空间的第三个维度.比如</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">A= [ <span class="number">1</span> <span class="number">2</span> ; <span class="number">3</span> <span class="number">4</span>];</span><br><span class="line">B= [ <span class="number">5</span> <span class="number">6</span> ; <span class="number">7</span> <span class="number">8</span>];</span><br><span class="line">C= <span class="built_in">cat</span>(<span class="number">1</span>,A,B)</span><br><span class="line">C= <span class="built_in">cat</span>(<span class="number">2</span>,A,B)</span><br><span class="line">C= <span class="built_in">cat</span>(<span class="number">3</span>,A,B)</span><br></pre></td></tr></table></figure>
+<p>上述三种<code>cat</code>方式对应的结果分别是:</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/be766f42cc4992c61cf0ade0eb5ae221.png" alt="image-20200701155412212" /></p>
+<p>于是, 对于上面的三维细胞数组的输入就可以转化为 输入两个平面细胞数组, 再对两个二维的细胞数组再第三维上执行<code>cat()</code>函数.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">A&#123;<span class="number">1</span>,<span class="number">1</span>&#125; = [<span class="number">1</span> <span class="number">2</span>;<span class="number">4</span> <span class="number">5</span>];</span><br><span class="line">A&#123;<span class="number">1</span>,<span class="number">2</span>&#125; = <span class="string">&#x27;Name&#x27;</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">1</span>&#125; = <span class="number">2</span><span class="number">-4</span><span class="built_in">i</span>;</span><br><span class="line">A&#123;<span class="number">2</span>,<span class="number">2</span>&#125; = <span class="number">7</span>;</span><br><span class="line">B&#123;<span class="number">1</span>,<span class="number">1</span>&#125; = <span class="string">&#x27;Name2&#x27;</span>;</span><br><span class="line">B&#123;<span class="number">1</span>,<span class="number">2</span>&#125; = <span class="number">3</span>;</span><br><span class="line">B&#123;<span class="number">2</span>,<span class="number">1</span>&#125; = <span class="number">0</span>:<span class="number">1</span>:<span class="number">3</span>;</span><br><span class="line">B&#123;<span class="number">2</span>,<span class="number">2</span>&#125; = [<span class="number">4</span> <span class="number">5</span>]&#x27;;</span><br><span class="line">C = <span class="built_in">cat</span>(<span class="number">3</span>, A, B)</span><br></pre></td></tr></table></figure>
+<p>下面再介绍<code>reshape()</code>函数, 这个函数可以实现把一个<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>×</mo><msub><mi>c</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">r_1 \times c_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的矩阵转化为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mn>2</mn></msub><mo>×</mo><msub><mi>c</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">r_2 \times c_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>的矩阵,但是要满足<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><msub><mi>c</mi><mn>1</mn></msub><mo>=</mo><msub><mi>r</mi><mn>2</mn></msub><msub><mi>c</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">r_1c_1=r_2c_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.58056em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A = &#123;<span class="string">&#x27;James Bond&#x27;</span>, [<span class="number">1</span> <span class="number">2</span>;<span class="number">3</span> <span class="number">4</span>;<span class="number">5</span> <span class="number">6</span>]; <span class="built_in">pi</span>, <span class="built_in">magic</span>(<span class="number">5</span>)&#125;</span><br><span class="line">C = <span class="built_in">reshape</span>(A,<span class="number">1</span>,<span class="number">4</span>)</span><br></pre></td></tr></table></figure>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/2a478f276cfe1636a78810485f864987.png" alt="image-20200701160811535" /></p>
+<p>可以看到, A是2维方阵, 而C是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>1</mn><mo>×</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">1\times 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">4</span></span></span></span>的矩阵.</p>
+<p>关于变量的相关内容就介绍这么多, 下面列举一些和变量相关的matlab函数:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isinteger.html">isinteger</a>: 确定输入是否为整数数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/islogical.html">islogical</a>: 确定输入是否为逻辑数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isnan.html">isnan</a>: 确定哪些数组元素为 NaN</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isnumeric.html">isnumeric</a>: 确定输入是否为数值数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isprime.html">isprime</a>: 确定哪些数组元素为质数</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isreal.html">isreal</a>: 确定数组是否为实数数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/iscell.html">iscell</a>: 确定输入是否为元胞数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/ischar.html">ischar</a>: 确定输入是否为字符数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isempty.html">isempty</a>: 确定数组是否为空</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isequal.html">isequal</a>: 确定数组相等性</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isfloat.html">isfloat</a>: 确定输入是否为浮点数组</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isglobal.html">isglobal</a>: 判断是否为全局变量</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/ishandle.html">ishandle</a>: 测试是否有效的图形或 对象句柄</li>
+<li><a target="_blank" rel="noopener" href="https://ww2.mathworks.cn/help/matlab/ref/isinf.html?requestedDomain=cn">isinf</a>: 确定哪些数组元素为无限值</li>
+</ul>
+<h1 id="变量存储"><a class="markdownIt-Anchor" href="#变量存储"></a> 变量存储</h1>
+<p>目前为止的学习中, matlab工作区中的变量在每次关闭matlab后就随之删除了, 下次打开matlab时不会再有上次的工作区变量, 在实际的应用中, 变量的存储有着十分重要的意义.下面介绍常用的变量存储于读入的方法, 对于不常用或者用起来不方便的变量存储方法, 可以参考资料链接中的PPT或视频讲解.</p>
+<h2 id="把变量存储为matlab格式数据"><a class="markdownIt-Anchor" href="#把变量存储为matlab格式数据"></a> 把变量存储为matlab格式数据</h2>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clear;</span><br><span class="line">a= <span class="built_in">magic</span>(<span class="number">4</span>);</span><br><span class="line">save mydata1.mat <span class="comment">% 文件名</span></span><br><span class="line">save mydata2.mat -ascii <span class="comment">% 文件名 编码方式</span></span><br></pre></td></tr></table></figure>
+<p>上述代码执行完毕后 , 我们可以发现在当前工作目录中已经多了两个两个<code>.mat</code>后缀的文件. 可以在windows资源管理器中查看到这两个文件. 对于第三行和第四行代码的区别, 第三行代码只是存储了当前工作区中的变量, 其编码方式没有指定, 默认为matlab的编码方式, 因此用文本编辑器打开时会出现乱码现象. 第四行代码在存储的同时指定了其编码方式 , 因此可以用文本编辑器打开查看其中的内容.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/5f2ba1b05f3e2792cf477b61238af25f.png" alt="image-20200701163547466" /></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/67bac3d4f5d624770923cae808428c56.png" alt="image-20200701163606277" /></p>
+<p>上述代码是存储工作区中的全部变量, 如果想要单独存储某一个变量, 需要执行 <code>save data1.mat name</code>表示存储工作区中的name变量, 如果工作区中没有name变量则会报错.</p>
+<p>读入变量使用<code>load()</code>函数:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">load(<span class="string">&#x27;mydata1.mat&#x27;</span>)</span><br><span class="line">load(<span class="string">&#x27;mydata2.mat&#x27;</span>,<span class="string">&#x27;-ascii&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="将变量存储为excel表格形式"><a class="markdownIt-Anchor" href="#将变量存储为excel表格形式"></a> 将变量存储为Excel表格形式</h2>
+<p>只需修改扩展名即可.</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">save data.xlsx</span><br><span class="line">save data1.xlsx -ascii</span><br></pre></td></tr></table></figure>
+<p>和上面类似, data和data1的区别在于能否被其他软件正确解码.</p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/05f34e066279941cc543aa829186aed4.png" alt="data.xlsx" /></p>
+<p><img src= "/img/loading.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img2006-2@latest/2020/07/01/be33775804d496b98f651a3bea7bd559.png" alt="data1.xlsx" /></p>
+<p>matlab 从Excel表格中读取数据,可以使用<code>xlsread()</code>函数, 可以指定起始读取位置和终止读取位置, 缺省为读取全部.</p>
+<div class="tip error"><p>后面的内容在我的matlab上就开始报错了, 具体原因我还没有找到, 考虑到后面的内容实际应用可能不是很多, 因此这一章的笔记就写到这里了.</p></div>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">b= xlsread(<span class="string">&#x27;data.xlsx&#x27;</span>)</span><br><span class="line">c= xlsread(<span class="string">&#x27;data.xlsx&#x27;</span>,<span class="string">&#x27;B2:D4&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h1 id="资料链接"><a class="markdownIt-Anchor" href="#资料链接"></a> 资料链接</h1>
+<a class="btn-beautify button--animated outline green larger" target="_blank" rel="noopener" href="https://www.acfun.cn/v/ac16369323_4" 
+  title="参考视频"><i class="far fa-hand-point-right fa-fw"></i><span>参考视频</span></a>
+<a class="btn-beautify button--animated outline orange larger" target="_blank" rel="noopener" href="http://cdn.jsdelivr.net/gh/blogrepo/pdf1.0/04Data_Structure_&_File_Access.pdf" 
+  title="参考讲义"><i class="far fa-hand-point-right fa-fw"></i><span>参考讲义</span></a>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:w.gx@foxmail.com">WGX</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://uaena.me/2020/06/29/2020-07/matlab-note3/">https://uaena.me/2020/06/29/2020-07/matlab-note3/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://uaena.me" target="_blank">WGXのBlog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Matlab/">Matlab</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161615.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/06/30/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"><img class="prev-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/img/wallhaven-0jgr25_1920x1080.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">资源共享</div></div></a></div><div class="next-post pull-right"><a href="/2020/06/28/2020-06/matlab-note2/"><img class="next-cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161633.webp" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Matlab学习笔记----结构化程序与函数</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/10/03/图像处理笔记/" title="图像处理笔记"><img class="cover" data-lazy-src="https://w-gx.gitee.io/acg01/111.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-10-03</div><div class="title">图像处理笔记</div></div></a></div><div><a href="/2020/06/28/2020-06/matlab-note2/" title="Matlab学习笔记----结构化程序与函数"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161633.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-06-28</div><div class="title">Matlab学习笔记----结构化程序与函数</div></div></a></div><div><a href="/2020/07/13/2020-07/matalb-note8/" title="Matlab学习笔记----图像处理(二)"><img class="cover" data-lazy-src="https://cdn.jsdelivr.net/gh/w-gx/2D/20200206161628.webp" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-07-13</div><div class="title">Matlab学习笔记----图像处理(二)</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Utterances</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" data-lazy-src="https://w-gx.gitee.io/avatar_rmbg.webp" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">WGX</div><div class="author-info__description">NO CODE NO LIFE</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">66</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">21</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">21</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/w-gx/comments/issues"><i class="fab fa-github"></i><span>Issues</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://w-gx.gitee.io" target="_blank" title="我的首页"><i class="fas fa-house-user"></i></a><a class="social-icon" href="https://github.com/w-gx" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:2401881997@qq.com" target="_blank" title="联系我"><i class="fas fa-envelope"></i></a><a class="social-icon" href="tencent://message/?uin=2401881997&amp;Site=&amp;Menu=yes" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://w-gx.gitee.io/resume/assets/images/WeChanSQ.jpg" target="_blank" title="微信码"><i class="fab fa-weixin"></i></a><a class="social-icon" href="https://weibo.com/3166393074/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" target="_blank" title="微博"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://www.instagram.com/wgx7777/" target="_blank" title="Instragram"><i class="fab fa-instagram"></i></a><a class="social-icon" href="https://wgx-dh.github.io" target="_blank" title="导航网站"><i class="fa fa-flag"></i></a><a class="social-icon" href="https://guistar.tk/" target="_blank" title="我的网盘"><i class="fas fa-cloud-upload-alt"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="fas fa-rss"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>搬迁公告</span></div><div class="announcement_content"><p id = "gonggao">这个主题用腻了，长时间不更新也导致我审美疲劳了，于是决定换个主题。但是又觉得搬迁文章太麻烦，所以之前的文章就放在这里不动了。在新站点我整理了当前网站的文章目录，<a target="_blank" rel="noopener" href="https://frostwork.me/catalog/">点击查看</a>。新家地址：<a id="gong_gao3" target="_blank" rel="noopener" href="https://frostwork.me">https://frostwork.me</a></p></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F"><span class="toc-number">1.</span> <span class="toc-text"> 变量</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#char-string"><span class="toc-number">1.1.</span> <span class="toc-text"> char &amp; String</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#char"><span class="toc-number">1.1.1.</span> <span class="toc-text"> char</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#string"><span class="toc-number">1.1.2.</span> <span class="toc-text"> String</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#structure"><span class="toc-number">1.2.</span> <span class="toc-text"> Structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#cell-array"><span class="toc-number">1.3.</span> <span class="toc-text"> Cell Array</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#multidimensional-array"><span class="toc-number">1.4.</span> <span class="toc-text"> Multidimensional Array</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E5%AD%98%E5%82%A8"><span class="toc-number">2.</span> <span class="toc-text"> 变量存储</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E5%8F%98%E9%87%8F%E5%AD%98%E5%82%A8%E4%B8%BAmatlab%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE"><span class="toc-number">2.1.</span> <span class="toc-text"> 把变量存储为matlab格式数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E5%8F%98%E9%87%8F%E5%AD%98%E5%82%A8%E4%B8%BAexcel%E8%A1%A8%E6%A0%BC%E5%BD%A2%E5%BC%8F"><span class="toc-number">2.2.</span> <span class="toc-text"> 将变量存储为Excel表格形式</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%84%E6%96%99%E9%93%BE%E6%8E%A5"><span class="toc-number">3.</span> <span class="toc-text"> 资料链接</span></a></li></ol></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 <i id="heartbeat" class="fa fas fa-heartbeat"></i> WGX</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css"><script>$(function () {
+  $('span.katex-display').wrap('<div class="katex-wrap"></div>')
+})</script><script>function loadValine () {
+  function initValine () {
+    let initData = {
+      el: '#vcomment',
+      appId: 'N9kQohzQdS005IAuTtl0hqMn-MdYXbMMI',
+      appKey: 'sGQ1MvQQkUqgAK8AU32XOtqt',
+      placeholder: '1. 昵称填写QQ号可自动获取你的QQ昵称和头像,并自动帮你填写邮箱哦~ ^_^ \n2. 昵称和邮箱是必填项! \n3. 网址[选填]请手动添加https://',
+      avatar: 'monsterid',
+      meta: 'nick,mail,link'.split(','),
+      pageSize: '10',
+      lang: 'zh-CN',
+      recordIP: true,
+      serverURLs: '',
+      emojiCDN: '',
+      emojiMaps: "",
+      enableQQ: true,
+      path: window.location.pathname,
+    }
+
+    if (true) { 
+      initData.requiredFields= ('nick,mail'.split(','))
+    }
+    
+    if (false) {
+      const otherData = false
+      initData = Object.assign({}, initData, otherData)
+    }
+    
+    const valine = new Valine(initData)
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else $.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js', initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.querySelector('#vcomment'),loadValine)
+  else setTimeout(() => loadValine(), 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadUtterances () {
+  let ele = document.createElement('script')
+  ele.setAttribute('id', 'utterances_comment')
+  ele.setAttribute('src', 'https://utteranc.es/client.js')
+  ele.setAttribute('repo', 'w-gx/comments')
+  ele.setAttribute('issue-term', 'pathname')
+  let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+  ele.setAttribute('theme', nowTheme)
+  ele.setAttribute('crossorigin', 'anonymous')
+  ele.setAttribute('async', 'true')
+  document.getElementById('utterances-wrap').insertAdjacentElement('afterbegin',ele)
+}
+
+function utterancesTheme () {
+  if (document.querySelector('.utterances-frame')) {
+    const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    const message = {
+      type: 'set-theme',
+      theme: theme
+    };
+    const iframe = document.querySelector('.utterances-frame');
+    iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+}
+
+if ('Valine' === 'Utterances' || !true) {
+  if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+  else loadUtterances()
+} else {
+  function loadOtherComment () {
+    loadUtterances()
+  }
+}</script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@master/xkTool/v3.1.0/xkTool.js"></script><script src="/js/myjs.js"></script><script type="text/javascript"> $(document).ready(function(){alert("本站弃用！\n不再更新！\n详见公告\n继续关注我请移步至：https://frostwork.me");}) </script><canvas class="fireworks" mobile="true"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/canvas-fluttering-ribbon.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"]):not([href="/index/password/"]):not([href="/shuoshuo/"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+})</script></div></body></html>

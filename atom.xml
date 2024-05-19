@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>WGXのBlog</title>
+  <icon>https://uaena.me/icon.png</icon>
+  <subtitle>No Code No Life</subtitle>
+  <link href="https://uaena.me/atom.xml" rel="self"/>
+  
+  <link href="https://uaena.me/"/>
+  <updated>2020-11-14T09:13:50.000Z</updated>
+  <id>https://uaena.me/</id>
+  
+  <author>
+    <name>WGX</name>
+    <email>w.gx@foxmail.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>爱在日落黄昏时</title>
+    <link href="https://uaena.me/2020/11/14/2020-11/%E7%88%B1%E5%9C%A8%E6%97%A5%E8%90%BD%E9%BB%84%E6%98%8F%E6%97%B6/"/>
+    <id>https://uaena.me/2020/11/14/2020-11/%E7%88%B1%E5%9C%A8%E6%97%A5%E8%90%BD%E9%BB%84%E6%98%8F%E6%97%B6/</id>
+    <published>2020-11-14T09:13:50.000Z</published>
+    <updated>2020-11-14T09:13:50.000Z</updated>
+    
+    
+    <summary type="html">有东西被加密了, 请输入密码查看.</summary>
+    
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/categories/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+    
+    <category term="捡到宝了" scheme="https://uaena.me/tags/%E6%8D%A1%E5%88%B0%E5%AE%9D%E4%BA%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>X-Ray Enhancement Based on Component Attenuation, Contrast Adjustment, and Image Fusion</title>
+    <link href="https://uaena.me/2020/10/16/2020-10/X-Ray-Enhancement/"/>
+    <id>https://uaena.me/2020/10/16/2020-10/X-Ray-Enhancement/</id>
+    <published>2020-10-16T08:18:32.000Z</published>
+    <updated>2020-10-16T08:18:40.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/categories/CV-Paper/"/>
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/tags/CV-Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通过红外图像加权函数估计进行图像增强</title>
+    <link href="https://uaena.me/2020/10/13/2020-10/%E9%80%9A%E8%BF%87%E7%BA%A2%E5%A4%96%E5%9B%BE%E5%83%8F%E5%8A%A0%E6%9D%83%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1%E8%BF%9B%E8%A1%8C%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA/"/>
+    <id>https://uaena.me/2020/10/13/2020-10/%E9%80%9A%E8%BF%87%E7%BA%A2%E5%A4%96%E5%9B%BE%E5%83%8F%E5%8A%A0%E6%9D%83%E5%87%BD%E6%95%B0%E4%BC%B0%E8%AE%A1%E8%BF%9B%E8%A1%8C%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA/</id>
+    <published>2020-10-13T12:15:04.000Z</published>
+    <updated>2020-10-13T12:15:04.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/categories/CV-Paper/"/>
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/tags/CV-Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>论文阅读笔记</title>
+    <link href="https://uaena.me/2020/10/09/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    <id>https://uaena.me/2020/10/09/%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-10-09T12:51:05.000Z</published>
+    <updated>2020-10-11T02:52:15.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="阅读笔记" scheme="https://uaena.me/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Self-use documents" scheme="https://uaena.me/tags/Self-use-documents/"/>
+    
+    <category term="Reading Notes" scheme="https://uaena.me/tags/Reading-Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Underwater Image Enhancement Using Adaptive Retinal Mechanisms</title>
+    <link href="https://uaena.me/2020/10/06/2020-10/%E8%A7%86%E7%BD%91%E8%86%9C%E6%9C%BA%E5%88%B6%E6%B0%B4%E4%B8%8B%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA/"/>
+    <id>https://uaena.me/2020/10/06/2020-10/%E8%A7%86%E7%BD%91%E8%86%9C%E6%9C%BA%E5%88%B6%E6%B0%B4%E4%B8%8B%E5%9B%BE%E5%83%8F%E5%A2%9E%E5%BC%BA/</id>
+    <published>2020-10-06T02:54:05.000Z</published>
+    <updated>2020-10-06T02:54:00.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/categories/CV-Paper/"/>
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/tags/CV-Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图像处理笔记</title>
+    <link href="https://uaena.me/2020/10/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/"/>
+    <id>https://uaena.me/2020/10/03/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-10-03T07:48:48.000Z</published>
+    <updated>2020-10-03T07:48:48.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+    <category term="Self-use documents" scheme="https://uaena.me/tags/Self-use-documents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A Biological Vision Inspired Framework for Image Enhancement in Poor Visibility Conditions</title>
+    <link href="https://uaena.me/2020/10/02/2020-10/%E7%94%9F%E7%89%A9%E8%A7%86%E8%A7%89%E5%90%AF%E5%8F%91%E6%A1%86%E6%9E%B6/"/>
+    <id>https://uaena.me/2020/10/02/2020-10/%E7%94%9F%E7%89%A9%E8%A7%86%E8%A7%89%E5%90%AF%E5%8F%91%E6%A1%86%E6%9E%B6/</id>
+    <published>2020-10-02T13:14:15.000Z</published>
+    <updated>2020-10-02T13:14:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/categories/CV-Paper/"/>
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/tags/CV-Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>庚子中秋</title>
+    <link href="https://uaena.me/2020/09/30/2020-09/%E5%BA%9A%E5%AD%90%E4%B8%AD%E7%A7%8B/"/>
+    <id>https://uaena.me/2020/09/30/2020-09/%E5%BA%9A%E5%AD%90%E4%B8%AD%E7%A7%8B/</id>
+    <published>2020-09-30T14:12:25.000Z</published>
+    <updated>2020-09-30T14:12:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/tags/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FAMED-Net：A Fast and Accurate Multi-Scale End-to-End Dehazing Network</title>
+    <link href="https://uaena.me/2020/09/26/2020-09/FAMED-Net/"/>
+    <id>https://uaena.me/2020/09/26/2020-09/FAMED-Net/</id>
+    <published>2020-09-26T09:14:08.000Z</published>
+    <updated>2020-09-26T15:31:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/categories/CV-Paper/"/>
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/tags/CV-Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>numpy &amp; pandas 笔记</title>
+    <link href="https://uaena.me/2020/09/24/2020-09/numpy/"/>
+    <id>https://uaena.me/2020/09/24/2020-09/numpy/</id>
+    <published>2020-09-24T12:13:59.000Z</published>
+    <updated>2020-09-26T05:12:26.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://uaena.me/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+    <category term="Machine Learning" scheme="https://uaena.me/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>水下图像智能去雾与色彩还原研究进展</title>
+    <link href="https://uaena.me/2020/09/22/2020-09/%E7%BB%BC%E8%BF%B0-%E6%B0%B4%E4%B8%8B%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    <id>https://uaena.me/2020/09/22/2020-09/%E7%BB%BC%E8%BF%B0-%E6%B0%B4%E4%B8%8B%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</id>
+    <published>2020-09-22T14:43:29.000Z</published>
+    <updated>2020-09-22T14:43:29.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/categories/CV-Paper/"/>
+    
+    
+    <category term="CV Paper" scheme="https://uaena.me/tags/CV-Paper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020--2021 第一学期 周报</title>
+    <link href="https://uaena.me/2020/09/20/2020-09/%E5%91%A8%E6%8A%A52020-2021-1/"/>
+    <id>https://uaena.me/2020/09/20/2020-09/%E5%91%A8%E6%8A%A52020-2021-1/</id>
+    <published>2020-09-20T13:44:02.000Z</published>
+    <updated>2020-11-16T12:28:42.944Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="研究生周报" scheme="https://uaena.me/categories/%E7%A0%94%E7%A9%B6%E7%94%9F%E5%91%A8%E6%8A%A5/"/>
+    
+    
+    <category term="Weekly Report" scheme="https://uaena.me/tags/Weekly-Report/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性回归模型Matlab实现</title>
+    <link href="https://uaena.me/2020/09/19/2020-09/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8BMatlab%E5%AE%9E%E7%8E%B0/"/>
+    <id>https://uaena.me/2020/09/19/2020-09/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8BMatlab%E5%AE%9E%E7%8E%B0/</id>
+    <published>2020-09-19T13:57:24.000Z</published>
+    <updated>2020-09-19T13:57:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="机器学习" scheme="https://uaena.me/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+    <category term="Machine Learning" scheme="https://uaena.me/tags/Machine-Learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>报道</title>
+    <link href="https://uaena.me/2020/09/11/2020-09/%E6%8A%A5%E9%81%93/"/>
+    <id>https://uaena.me/2020/09/11/2020-09/%E6%8A%A5%E9%81%93/</id>
+    <published>2020-09-11T12:32:27.000Z</published>
+    <updated>2020-09-11T12:32:27.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/categories/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/tags/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python解方程练习</title>
+    <link href="https://uaena.me/2020/09/09/2020-09/python%E8%A7%A3%E6%96%B9%E7%A8%8B/"/>
+    <id>https://uaena.me/2020/09/09/2020-09/python%E8%A7%A3%E6%96%B9%E7%A8%8B/</id>
+    <published>2020-09-09T04:10:37.000Z</published>
+    <updated>2020-09-09T04:10:37.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迭代器与生成器</title>
+    <link href="https://uaena.me/2020/09/03/2020-09/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/"/>
+    <id>https://uaena.me/2020/09/03/2020-09/%E8%BF%AD%E4%BB%A3%E5%99%A8%E4%B8%8E%E7%94%9F%E6%88%90%E5%99%A8/</id>
+    <published>2020-09-03T12:27:14.000Z</published>
+    <updated>2020-09-03T12:27:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用IBM Cloud Fonudray搭建V2Ray</title>
+    <link href="https://uaena.me/2020/08/30/2020-08/IBM-CLOUD/"/>
+    <id>https://uaena.me/2020/08/30/2020-08/IBM-CLOUD/</id>
+    <published>2020-08-30T07:59:34.000Z</published>
+    <updated>2020-08-30T07:59:34.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="科学上网" scheme="https://uaena.me/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="V2ray" scheme="https://uaena.me/tags/V2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python--异常和文件</title>
+    <link href="https://uaena.me/2020/08/22/2020-08/Python-%E5%BC%82%E5%B8%B8%E5%92%8C%E6%96%87%E4%BB%B6/"/>
+    <id>https://uaena.me/2020/08/22/2020-08/Python-%E5%BC%82%E5%B8%B8%E5%92%8C%E6%96%87%E4%BB%B6/</id>
+    <published>2020-08-22T04:29:38.000Z</published>
+    <updated>2020-08-22T04:29:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python--对象</title>
+    <link href="https://uaena.me/2020/08/19/2020-08/Python-%E5%AF%B9%E8%B1%A1/"/>
+    <id>https://uaena.me/2020/08/19/2020-08/Python-%E5%AF%B9%E8%B1%A1/</id>
+    <published>2020-08-19T01:42:27.000Z</published>
+    <updated>2020-08-19T10:06:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python--函数</title>
+    <link href="https://uaena.me/2020/08/13/2020-08/Python-%E5%87%BD%E6%95%B0/"/>
+    <id>https://uaena.me/2020/08/13/2020-08/Python-%E5%87%BD%E6%95%B0/</id>
+    <published>2020-08-13T10:48:26.000Z</published>
+    <updated>2020-08-15T01:52:53.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>为你的Github Pages申请js.org二级域名</title>
+    <link href="https://uaena.me/2020/08/10/2020-08/%E7%94%B3%E8%AF%B7js-org/"/>
+    <id>https://uaena.me/2020/08/10/2020-08/%E7%94%B3%E8%AF%B7js-org/</id>
+    <published>2020-08-10T12:19:14.000Z</published>
+    <updated>2020-08-10T14:00:20.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://uaena.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Blog" scheme="https://uaena.me/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>录取通知书</title>
+    <link href="https://uaena.me/2020/08/10/2020-08/%E5%BD%95%E5%8F%96%E9%80%9A%E7%9F%A5%E4%B9%A6/"/>
+    <id>https://uaena.me/2020/08/10/2020-08/%E5%BD%95%E5%8F%96%E9%80%9A%E7%9F%A5%E4%B9%A6/</id>
+    <published>2020-08-10T05:32:36.000Z</published>
+    <updated>2020-08-10T05:32:36.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/categories/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/tags/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python--序列</title>
+    <link href="https://uaena.me/2020/08/09/2020-08/Python-%E5%BA%8F%E5%88%97/"/>
+    <id>https://uaena.me/2020/08/09/2020-08/Python-%E5%BA%8F%E5%88%97/</id>
+    <published>2020-08-09T11:50:07.000Z</published>
+    <updated>2020-08-10T10:29:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>潘石屹Python一百题</title>
+    <link href="https://uaena.me/2020/08/08/2020-08/%E6%BD%98%E7%9F%B3%E5%B1%B9Python%E4%B8%80%E7%99%BE%E9%A2%98/"/>
+    <id>https://uaena.me/2020/08/08/2020-08/%E6%BD%98%E7%9F%B3%E5%B1%B9Python%E4%B8%80%E7%99%BE%E9%A2%98/</id>
+    <published>2020-08-08T14:55:22.000Z</published>
+    <updated>2020-08-08T14:55:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python--流程控制语句</title>
+    <link href="https://uaena.me/2020/08/06/2020-08/Python-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/"/>
+    <id>https://uaena.me/2020/08/06/2020-08/Python-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6%E8%AF%AD%E5%8F%A5/</id>
+    <published>2020-08-06T07:37:12.000Z</published>
+    <updated>2020-08-06T07:37:12.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Github Actions实现天翼云盘自动签到</title>
+    <link href="https://uaena.me/2020/08/05/%E5%A4%A9%E7%BF%BC%E4%BA%91%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/"/>
+    <id>https://uaena.me/2020/08/05/%E5%A4%A9%E7%BF%BC%E4%BA%91%E8%87%AA%E5%8A%A8%E7%AD%BE%E5%88%B0/</id>
+    <published>2020-08-05T07:19:59.000Z</published>
+    <updated>2020-08-05T07:19:59.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://uaena.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>零代码基于Heroku搭建v2ray</title>
+    <link href="https://uaena.me/2020/08/05/%E5%9F%BA%E4%BA%8EHeroku%E6%90%AD%E5%BB%BAv2ray/"/>
+    <id>https://uaena.me/2020/08/05/%E5%9F%BA%E4%BA%8EHeroku%E6%90%AD%E5%BB%BAv2ray/</id>
+    <published>2020-08-05T04:00:39.000Z</published>
+    <updated>2020-09-12T08:30:55.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="科学上网" scheme="https://uaena.me/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="V2ray" scheme="https://uaena.me/tags/V2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于Infinityfree从零开始搭建WordPress网站</title>
+    <link href="https://uaena.me/2020/08/04/2020-08/%E5%9F%BA%E4%BA%8EInfinityfree%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAWordPress%E7%BD%91%E7%AB%99/"/>
+    <id>https://uaena.me/2020/08/04/2020-08/%E5%9F%BA%E4%BA%8EInfinityfree%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAWordPress%E7%BD%91%E7%AB%99/</id>
+    <published>2020-08-04T00:43:31.000Z</published>
+    <updated>2020-08-04T00:43:31.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://uaena.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Blog" scheme="https://uaena.me/tags/Blog/"/>
+    
+    <category term="WordPress" scheme="https://uaena.me/tags/WordPress/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于看板娘的一些说明</title>
+    <link href="https://uaena.me/2020/08/03/2020-08/%E5%85%B3%E4%BA%8E%E7%9C%8B%E6%9D%BF%E5%A8%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E/"/>
+    <id>https://uaena.me/2020/08/03/2020-08/%E5%85%B3%E4%BA%8E%E7%9C%8B%E6%9D%BF%E5%A8%98%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%B4%E6%98%8E/</id>
+    <published>2020-08-03T11:43:33.000Z</published>
+    <updated>2020-08-03T11:43:33.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python入门</title>
+    <link href="https://uaena.me/2020/08/03/2020-08/python%E5%85%A5%E9%97%A8/"/>
+    <id>https://uaena.me/2020/08/03/2020-08/python%E5%85%A5%E9%97%A8/</id>
+    <published>2020-08-03T09:46:48.000Z</published>
+    <updated>2020-08-05T13:09:44.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机基础知识</title>
+    <link href="https://uaena.me/2020/08/01/2020-08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <id>https://uaena.me/2020/08/01/2020-08/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</id>
+    <published>2020-08-01T03:05:03.000Z</published>
+    <updated>2020-08-01T03:05:03.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://uaena.me/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="https://uaena.me/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>伴郎</title>
+    <link href="https://uaena.me/2020/07/31/2020-07/%E4%BC%B4%E9%83%8E/"/>
+    <id>https://uaena.me/2020/07/31/2020-07/%E4%BC%B4%E9%83%8E/</id>
+    <published>2020-07-31T14:31:52.000Z</published>
+    <updated>2020-07-31T14:31:52.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/categories/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+    
+    <category term="结绳记事" scheme="https://uaena.me/tags/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>魔改笔记</title>
+    <link href="https://uaena.me/2020/07/20/2020-07/%E9%AD%94%E6%94%B9%E7%AC%94%E8%AE%B0/"/>
+    <id>https://uaena.me/2020/07/20/2020-07/%E9%AD%94%E6%94%B9%E7%AC%94%E8%AE%B0/</id>
+    <published>2020-07-20T01:32:17.000Z</published>
+    <updated>2020-08-16T09:56:59.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自用文档" scheme="https://uaena.me/categories/%E8%87%AA%E7%94%A8%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="Self-use documents" scheme="https://uaena.me/tags/Self-use-documents/"/>
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Blog" scheme="https://uaena.me/tags/Blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字图像处理pdf汇总</title>
+    <link href="https://uaena.me/2020/07/17/2020-07/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86pdf/"/>
+    <id>https://uaena.me/2020/07/17/2020-07/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86pdf/</id>
+    <published>2020-07-17T14:07:38.000Z</published>
+    <updated>2020-07-17T14:07:38.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----回归与插值</title>
+    <link href="https://uaena.me/2020/07/17/2020-07/matlab-note13/"/>
+    <id>https://uaena.me/2020/07/17/2020-07/matlab-note13/</id>
+    <published>2020-07-17T02:22:01.000Z</published>
+    <updated>2020-07-17T02:22:01.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----统计学</title>
+    <link href="https://uaena.me/2020/07/16/2020-07/matlab-note12/"/>
+    <id>https://uaena.me/2020/07/16/2020-07/matlab-note12/</id>
+    <published>2020-07-16T07:48:22.000Z</published>
+    <updated>2020-07-16T07:48:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----线性方程组与线性系统</title>
+    <link href="https://uaena.me/2020/07/15/2020-07/matlab-note11/"/>
+    <id>https://uaena.me/2020/07/15/2020-07/matlab-note11/</id>
+    <published>2020-07-15T12:05:59.000Z</published>
+    <updated>2020-07-15T12:05:59.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----方程式求根</title>
+    <link href="https://uaena.me/2020/07/14/2020-07/matlab-note10/"/>
+    <id>https://uaena.me/2020/07/14/2020-07/matlab-note10/</id>
+    <published>2020-07-14T15:18:43.000Z</published>
+    <updated>2020-07-14T15:18:43.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----微积分计算</title>
+    <link href="https://uaena.me/2020/07/14/2020-07/matlab-note9/"/>
+    <id>https://uaena.me/2020/07/14/2020-07/matlab-note9/</id>
+    <published>2020-07-14T04:53:24.000Z</published>
+    <updated>2020-07-14T04:53:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----图像处理(二)</title>
+    <link href="https://uaena.me/2020/07/13/2020-07/matalb-note8/"/>
+    <id>https://uaena.me/2020/07/13/2020-07/matalb-note8/</id>
+    <published>2020-07-13T06:11:30.000Z</published>
+    <updated>2020-07-13T06:11:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----图像处理(一)</title>
+    <link href="https://uaena.me/2020/07/11/2020-07/matlab-note7/"/>
+    <id>https://uaena.me/2020/07/11/2020-07/matlab-note7/</id>
+    <published>2020-07-11T06:51:24.000Z</published>
+    <updated>2020-07-11T06:51:24.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----图形界面</title>
+    <link href="https://uaena.me/2020/07/08/2020-07/matlab-note6/"/>
+    <id>https://uaena.me/2020/07/08/2020-07/matlab-note6/</id>
+    <published>2020-07-08T02:42:13.000Z</published>
+    <updated>2020-07-08T02:42:13.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----进阶绘图</title>
+    <link href="https://uaena.me/2020/07/05/2020-07/matlab-note5/"/>
+    <id>https://uaena.me/2020/07/05/2020-07/matlab-note5/</id>
+    <published>2020-07-05T06:12:37.000Z</published>
+    <updated>2020-07-05T06:12:37.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----初级绘图</title>
+    <link href="https://uaena.me/2020/07/02/2020-07/matlab-note4/"/>
+    <id>https://uaena.me/2020/07/02/2020-07/matlab-note4/</id>
+    <published>2020-07-02T01:57:25.000Z</published>
+    <updated>2020-07-02T01:57:25.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>资源共享</title>
+    <link href="https://uaena.me/2020/06/30/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/"/>
+    <id>https://uaena.me/2020/06/30/%E8%B5%84%E6%BA%90%E5%85%B1%E4%BA%AB/</id>
+    <published>2020-06-30T02:51:19.000Z</published>
+    <updated>2020-09-07T03:34:49.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----变量和数据存储</title>
+    <link href="https://uaena.me/2020/06/29/2020-07/matlab-note3/"/>
+    <id>https://uaena.me/2020/06/29/2020-07/matlab-note3/</id>
+    <published>2020-06-29T03:41:06.000Z</published>
+    <updated>2020-06-29T03:41:06.000Z</updated>
+    
+    
+    <summary type="html">介绍Matlab的一些其他变量和如何存储工作区的变量</summary>
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----结构化程序与函数</title>
+    <link href="https://uaena.me/2020/06/28/2020-06/matlab-note2/"/>
+    <id>https://uaena.me/2020/06/28/2020-06/matlab-note2/</id>
+    <published>2020-06-28T06:01:17.000Z</published>
+    <updated>2020-06-28T06:01:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Matlab学习笔记----把Matlab当做计算器来使用</title>
+    <link href="https://uaena.me/2020/06/25/2020-06/Matlab-note1/"/>
+    <id>https://uaena.me/2020/06/25/2020-06/Matlab-note1/</id>
+    <published>2020-06-25T10:02:22.000Z</published>
+    <updated>2020-06-25T10:02:22.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/categories/Matlab/"/>
+    
+    
+    <category term="Matlab" scheme="https://uaena.me/tags/Matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>十分钟电脑装配速成攻略</title>
+    <link href="https://uaena.me/2020/06/24/2020-06/%E8%A3%85%E6%9C%BA%E6%94%BB%E7%95%A5/"/>
+    <id>https://uaena.me/2020/06/24/2020-06/%E8%A3%85%E6%9C%BA%E6%94%BB%E7%95%A5/</id>
+    <published>2020-06-24T06:13:02.000Z</published>
+    <updated>2020-06-24T06:13:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="实用教程" scheme="https://uaena.me/categories/%E5%AE%9E%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字图像处理第四章</title>
+    <link href="https://uaena.me/2020/06/23/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
+    <id>https://uaena.me/2020/06/23/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E5%9B%9B%E7%AB%A0/</id>
+    <published>2020-06-23T06:00:47.000Z</published>
+    <updated>2020-06-23T06:00:47.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="数字图像处理第四章" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E5%9B%9B%E7%AB%A0/"/>
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字图像处理第三章</title>
+    <link href="https://uaena.me/2020/06/20/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%B8%89%E7%AB%A0/"/>
+    <id>https://uaena.me/2020/06/20/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%B8%89%E7%AB%A0/</id>
+    <published>2020-06-20T14:00:59.000Z</published>
+    <updated>2020-06-20T14:00:59.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="数字图像处理第三章" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%B8%89%E7%AB%A0/"/>
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字图像处理第二章</title>
+    <link href="https://uaena.me/2020/06/11/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%862-1/"/>
+    <id>https://uaena.me/2020/06/11/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%862-1/</id>
+    <published>2020-06-11T12:21:15.000Z</published>
+    <updated>2020-06-11T12:21:15.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="数字图像处理第二章" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字图像处理第一章</title>
+    <link href="https://uaena.me/2020/06/10/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%861-1/"/>
+    <id>https://uaena.me/2020/06/10/2020-06/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%861-1/</id>
+    <published>2020-06-10T12:40:02.000Z</published>
+    <updated>2020-06-10T12:40:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="数字图像处理第一章" scheme="https://uaena.me/categories/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86%E7%AC%AC%E4%B8%80%E7%AB%A0/"/>
+    
+    
+    <category term="数字图像处理" scheme="https://uaena.me/tags/%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>喜报!</title>
+    <link href="https://uaena.me/2020/05/18/2020-05/%E5%96%9C%E6%8A%A5!/"/>
+    <id>https://uaena.me/2020/05/18/2020-05/%E5%96%9C%E6%8A%A5!/</id>
+    <published>2020-05-18T15:49:33.000Z</published>
+    <updated>2020-05-18T15:49:33.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="结绳记事" scheme="https://uaena.me/tags/%E7%BB%93%E7%BB%B3%E8%AE%B0%E4%BA%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试回忆录</title>
+    <link href="https://uaena.me/2020/05/18/2020-05/%E9%9D%A2%E8%AF%95%E5%9B%9E%E5%BF%86%E5%BD%95/"/>
+    <id>https://uaena.me/2020/05/18/2020-05/%E9%9D%A2%E8%AF%95%E5%9B%9E%E5%BF%86%E5%BD%95/</id>
+    <published>2020-05-18T15:48:42.000Z</published>
+    <updated>2020-05-18T15:48:42.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="面试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="面试" scheme="https://uaena.me/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>命名空间到底是什么</title>
+    <link href="https://uaena.me/2020/05/13/2020-05/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/"/>
+    <id>https://uaena.me/2020/05/13/2020-05/%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/</id>
+    <published>2020-05-13T15:47:30.000Z</published>
+    <updated>2020-05-13T15:47:30.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="C/C++" scheme="https://uaena.me/categories/C-C/"/>
+    
+    
+    <category term="C/C++" scheme="https://uaena.me/tags/C-C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试问题预测与预案</title>
+    <link href="https://uaena.me/2020/05/12/2020-05/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E9%A2%84%E6%B5%8B%E4%B8%8E%E9%A2%84%E6%A1%88/"/>
+    <id>https://uaena.me/2020/05/12/2020-05/%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E9%A2%84%E6%B5%8B%E4%B8%8E%E9%A2%84%E6%A1%88/</id>
+    <published>2020-05-12T15:48:17.000Z</published>
+    <updated>2020-05-12T15:48:17.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="面试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="面试" scheme="https://uaena.me/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;概论&gt;常见简答题</title>
+    <link href="https://uaena.me/2020/05/12/2020-05/SQL%E7%AE%80%E7%AD%94/"/>
+    <id>https://uaena.me/2020/05/12/2020-05/SQL%E7%AE%80%E7%AD%94/</id>
+    <published>2020-05-12T15:46:46.000Z</published>
+    <updated>2020-05-12T15:46:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://uaena.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="https://uaena.me/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="SQL" scheme="https://uaena.me/tags/SQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用颜色的RGB数值</title>
+    <link href="https://uaena.me/2020/05/12/2020-05/%E5%B8%B8%E7%94%A8%E9%A2%9C%E8%89%B2%E7%9A%84RGB%E6%95%B0%E5%80%BC/"/>
+    <id>https://uaena.me/2020/05/12/2020-05/%E5%B8%B8%E7%94%A8%E9%A2%9C%E8%89%B2%E7%9A%84RGB%E6%95%B0%E5%80%BC/</id>
+    <published>2020-05-12T06:03:39.000Z</published>
+    <updated>2020-05-12T06:03:39.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="自用文档" scheme="https://uaena.me/categories/%E8%87%AA%E7%94%A8%E6%96%87%E6%A1%A3/"/>
+    
+    
+    <category term="Self-use documents" scheme="https://uaena.me/tags/Self-use-documents/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>谭剑波考研复试口语</title>
+    <link href="https://uaena.me/2020/05/10/2020-05/%E8%B0%AD%E5%89%91%E6%B3%A2%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95%E5%8F%A3%E8%AF%AD/"/>
+    <id>https://uaena.me/2020/05/10/2020-05/%E8%B0%AD%E5%89%91%E6%B3%A2%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95%E5%8F%A3%E8%AF%AD/</id>
+    <published>2020-05-10T06:03:13.000Z</published>
+    <updated>2020-05-10T06:03:13.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="英语" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="英语" scheme="https://uaena.me/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语听力训练_中级篇</title>
+    <link href="https://uaena.me/2020/05/08/2020-05/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E8%AE%AD%E7%BB%83-%E4%B8%AD%E7%BA%A7%E7%AF%87/"/>
+    <id>https://uaena.me/2020/05/08/2020-05/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E8%AE%AD%E7%BB%83-%E4%B8%AD%E7%BA%A7%E7%AF%87/</id>
+    <published>2020-05-08T06:02:48.000Z</published>
+    <updated>2020-05-08T06:02:48.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="英语" scheme="https://uaena.me/categories/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="英语" scheme="https://uaena.me/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>&lt;概论&gt;经典SQL习题</title>
+    <link href="https://uaena.me/2020/05/07/2020-05/SQL%E4%B9%A0%E9%A2%98/"/>
+    <id>https://uaena.me/2020/05/07/2020-05/SQL%E4%B9%A0%E9%A2%98/</id>
+    <published>2020-05-07T15:47:05.000Z</published>
+    <updated>2020-05-07T15:47:05.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="数据库" scheme="https://uaena.me/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    
+    <category term="数据库" scheme="https://uaena.me/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    
+    <category term="SQL习题" scheme="https://uaena.me/tags/SQL%E4%B9%A0%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英语听力训练_初级篇</title>
+    <link href="https://uaena.me/2020/05/07/2020-05/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E8%AE%AD%E7%BB%83-%E5%88%9D%E7%BA%A7%E7%AF%87/"/>
+    <id>https://uaena.me/2020/05/07/2020-05/%E8%8B%B1%E8%AF%AD%E5%90%AC%E5%8A%9B%E8%AE%AD%E7%BB%83-%E5%88%9D%E7%BA%A7%E7%AF%87/</id>
+    <published>2020-05-07T06:02:26.000Z</published>
+    <updated>2020-05-07T06:02:26.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="英语" scheme="https://uaena.me/categories/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="英语" scheme="https://uaena.me/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>v2ray</title>
+    <link href="https://uaena.me/2020/05/06/2020-05/v2ray/"/>
+    <id>https://uaena.me/2020/05/06/2020-05/v2ray/</id>
+    <published>2020-05-06T14:04:12.000Z</published>
+    <updated>2020-05-06T14:04:12.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="科学上网" scheme="https://uaena.me/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="教程" scheme="https://uaena.me/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="V2ray" scheme="https://uaena.me/tags/V2ray/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Self-Introduction</title>
+    <link href="https://uaena.me/2020/05/04/2020-05/Self-Introduction/"/>
+    <id>https://uaena.me/2020/05/04/2020-05/Self-Introduction/</id>
+    <published>2020-05-04T15:49:46.000Z</published>
+    <updated>2020-05-04T15:49:46.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="英语" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="英语" scheme="https://uaena.me/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>英文问答</title>
+    <link href="https://uaena.me/2020/05/04/2020-05/%E8%8B%B1%E6%96%87%E9%97%AE%E7%AD%94/"/>
+    <id>https://uaena.me/2020/05/04/2020-05/%E8%8B%B1%E6%96%87%E9%97%AE%E7%AD%94/</id>
+    <published>2020-05-04T05:21:02.000Z</published>
+    <updated>2020-05-04T05:21:02.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="英语" scheme="https://uaena.me/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/%E8%8B%B1%E8%AF%AD/"/>
+    
+    
+    <category term="考研复试" scheme="https://uaena.me/tags/%E8%80%83%E7%A0%94%E5%A4%8D%E8%AF%95/"/>
+    
+    <category term="英语" scheme="https://uaena.me/tags/%E8%8B%B1%E8%AF%AD/"/>
+    
+  </entry>
+  
+</feed>

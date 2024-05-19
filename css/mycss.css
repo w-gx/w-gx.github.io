@@ -1,0 +1,76 @@
+article#article-container.post-content{font-size:15px;} /* 正文字体 */
+/*首页中间标题颜色*/
+div#site-info h1#site_title{
+	color: #9870cc !important;
+	text-shadow: rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 20px, rgb(255, 0, 222) 0px 0px 30px, rgb(255, 0, 222) 0px 0px 40px, rgb(255, 0, 222) 0px 0px 70px, rgb(255, 0, 222) 0px 0px 80px, rgb(255, 0, 222) 0px 0px 100px !important;
+}
+/*首页中间标题鼠标悬停颜色*/
+div#site-info h1#site_title:hover{
+	color: #00ffff !important;
+	text-shadow: rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 20px, rgb(255, 255, 255) 0px 0px 30px, rgb(0, 255, 255) 0px 0px 40px, rgb(0, 255, 255) 0px 0px 70px, rgb(0, 255, 255) 0px 0px 80px, rgb(0, 255, 255) 0px 0px 100px !important;
+}
+/*左上角标题颜色*/
+a#site-name{
+	color: #ff763b !important;
+	text-shadow: rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 20px, rgb(255, 255, 255) 0px 0px 30px, #ff763b 0px 0px 40px, #ff763b 0px 0px 70px, #ff763b 0px 0px 80px, #ff763b 0px 0px 100px !important;
+}
+/*页脚信息*/
+div.copyright{
+	color: #96bd3a !important;
+	text-shadow: rgb(255, 255, 255) 0px 0px 10px, rgb(255, 255, 255) 0px 0px 20px, rgb(255, 255, 255) 0px 0px 30px, rgb(0, 255, 255) 0px 0px 40px, rgb(0, 255, 255) 0px 0px 70px, rgb(0, 255, 255) 0px 0px 80px, rgb(0, 255, 255) 0px 0px 100px !important;
+}
+/*页脚跳动的心*/
+i#heartbeat{color:red;animation:iconAnimate 1.33s ease-in-out infinite}@-moz-keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}@-webkit-keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}@-o-keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}@keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}
+/*IU跳动的心*/
+i.fa-fw.fa.fas.fa-heartbeat{color:red;animation:iconAnimate 1.33s ease-in-out infinite}@-moz-keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}@-webkit-keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}@-o-keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}@keyframes iconAnimate{0%,100%{transform:scale(1)}10%,30%{transform:scale(.9)}20%,40%,60%,80%{transform:scale(1.1)}50%,70%{transform:scale(1.1)}}
+
+/*社交图标颜色修改*/
+i.fas.fa-house-user{color:#44d7b6;}
+i.fab.fa-github{color:#000000;}
+i.fas.fa-envelope{color:#A020F0;}
+i.fab.fa-qq{color:#56b6e7;}
+i.fab.fa-weibo{color:#ff763b;}
+i.fab.fa-instagram{color:#FF69B4;}
+i.fas.fa-rss{color:#7bc549;}
+i.fa.fa-flag{color:#44619D;}
+i.fas.fa-cloud-upload-alt{color:#9370DB;}
+i.fab.fa-weixin{color:#348903;}
+
+
+/* 以下是个别位置的属性 */
+/*友链页的p标签*/
+p#my_link.div-border{
+	font-size:18px;
+}
+/*IU页的p标签*/
+p#IU.div-border{
+	color: #9870cc !important;
+	font-size:28px !important;
+}
+/*图片页的4个p标签*/
+p#tupian.div-border{
+	font-size:18px !important;
+}
+p#pcbizhi.div-border{
+	font-size:18px !important;
+}
+p#bizhi.div-border{
+	font-size:18px !important;
+}
+p#touxiang.div-border{
+	font-size:18px !important;
+}
+/*资源共享的小提示文字颜色*/
+p#gong_xiang{
+	color:#ff0000;
+}
+/*二次元图片页面的p标签*/
+p#p2D,p#p2D01,p#p2D02,p#p2D03,p#p2D04,p#p2D05,p#p2D06,p#p2D07,p#p2D08,p#p2D09,p#p2D10,p#p2D11,p#p2D12,p#p2D13,p#p2D14,p#p2D15,p#p2D16,p#p2D17,p#p2D18,p#p2D19,p#p2D20,p#wallpaper-01{font-size:18px !important;}
+
+/*侧边栏公告链接颜色*/
+#gong_gao1{color:#ff1010;}
+#gong_gao2,#gong_gao3{color:#ff763b;}
+
+/*留言板UV信息*/
+span.vsys{color: #ff763b;}
+span.vtime{color: #FF69B4;}
